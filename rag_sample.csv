@@ -1,0 +1,263 @@
+Prompt,Output
+Data Scientist,"Job Title: Data Scientist
+
+Job Description:
+We are seeking a talented Data Scientist to join our team. The ideal candidate will be responsible for designing, implementing, and deploying data-driven solutions to extract insights from large datasets. You will work closely with cross-functional teams to identify business opportunities and provide actionable recommendations. The role involves conducting statistical analysis, developing machine learning models, and creating data visualizations to communicate findings effectively.
+
+Responsibilities:
+- Clean, preprocess, and analyze large datasets to uncover trends and patterns.
+- Develop predictive models and algorithms to solve business problems.
+- Collaborate with stakeholders to define project objectives and deliverables.
+- Present findings and recommendations to technical and non-technical audiences.
+- Stay updated with the latest advancements in data science techniques and tools.
+
+Skills and Qualifications:
+- Proficiency in programming languages such as Python, R, or Scala.
+- Strong understanding of statistical methods and machine learning techniques.
+- Experience with data manipulation and analysis libraries (e.g., pandas, NumPy, scikit-learn).
+- Familiarity with big data technologies (e.g., Hadoop, Spark) is a plus.
+- Excellent communication and collaboration skills.
+- Ability to work in a fast-paced, dynamic environment and manage multiple projects simultaneously.
+- Advanced degree in Computer Science, Statistics, Mathematics, or related field preferred."
+Software Engineer,"Job Description:
+We are looking for a highly motivated Software Engineer to join our team. As a Software Engineer, you will be responsible for designing, developing, and maintaining software applications. You will work closely with cross-functional teams to understand requirements, architect solutions, and deliver high-quality code. The role requires strong problem-solving skills, attention to detail, and a passion for building scalable and robust software systems.
+
+Responsibilities:
+- Collaborate with product managers and stakeholders to define project requirements and timelines.
+- Design and implement software solutions that meet performance, scalability, and reliability requirements.
+- Write clean, efficient, and well-documented code in languages such as Java, C++, or Python.
+- Conduct code reviews, identify areas for improvement, and mentor junior team members.
+- Troubleshoot and debug issues in production environments and provide timely resolutions.
+- Stay updated with emerging technologies and best practices in software development.
+
+Skills and Qualifications:
+- Proficiency in one or more programming languages such as Java, C++, Python, or JavaScript.
+- Strong understanding of data structures, algorithms, and object-oriented design principles.
+- Experience with software development methodologies such as Agile or Scrum.
+- Knowledge of web development frameworks (e.g., Spring, Django) is a plus.
+- Familiarity with version control systems (e.g., Git) and CI/CD pipelines.
+- Excellent problem-solving and analytical skills.
+- Bachelor's degree in Computer Science, Engineering, or related field."
+Cybersecurity Analyst,"Job Description:
+We are seeking a skilled Cybersecurity Analyst to join our team. The ideal candidate will be responsible for monitoring, detecting, and responding to security incidents to protect our organization's systems and data. You will analyze security threats, conduct risk assessments, and implement security controls to mitigate vulnerabilities. The role requires strong analytical skills, attention to detail, and a deep understanding of cybersecurity principles and practices.
+
+Responsibilities:
+- Monitor security alerts and logs to identify potential threats and vulnerabilities.
+- Investigate security incidents, analyze attack vectors, and recommend remediation measures.
+- Conduct vulnerability assessments and penetration tests to identify weaknesses in systems and networks.
+- Develop and maintain security policies, procedures, and documentation.
+- Collaborate with IT teams to implement security solutions and best practices.
+- Stay updated with the latest cybersecurity threats, trends, and technologies.
+
+Skills and Qualifications:
+- Knowledge of cybersecurity principles, practices, and frameworks (e.g., NIST, ISO 27001).
+- Experience with security tools such as SIEM, IDS/IPS, antivirus, and vulnerability scanners.
+- Strong understanding of networking protocols, operating systems, and cloud environments.
+- Proficiency in scripting or programming languages (e.g., Python, PowerShell) for automation.
+- Excellent communication and teamwork skills.
+- Relevant certifications such as CISSP, CEH, or CompTIA Security+ are a plus.
+- Bachelor's degree in Computer Science, Information Security, or related field."
+Software Engineer,"Job Description:
+We are looking for a Software Engineer to join our team. In this role, you will work alongside other engineers to configure, develop, and manage the deployment of intricate enterprise software solutions. You will have the opportunity to use your programming skills, innovation, and engineering expertise to implement new ideas, develop tools and applications, and improve project methodologies. As part of our team, you will apply Lean/Agile methodologies, understand Software Development Life Cycle (SDLC), utilize CI/CD pipelines, ensure quality and scalability, document and standardize processes, and employ effective testing techniques and issue resolution strategies. Effective communication and interpersonal skills are essential as you will interact with colleagues, customers, and stakeholders on a daily basis.
+Responsibilities:
+Collaborate on Smallworld projects, configuring, developing, and managing software solutions.
+Utilize programming skills and engineering expertise to implement new ideas and improve project methodologies.
+Apply Lean/Agile methodologies and SDLC principles to project activities.
+Use CI/CD pipelines to ensure quality and scalability of software solutions.
+Document processes, standardize procedures, and employ effective testing techniques.
+Interact with colleagues, customers, and stakeholders, demonstrating effective communication and interpersonal skills.
+Skills and Qualifications:
+Bachelor's degree in Software Engineering, Computer Science, IT, Electronics and Electrical Engineering, or similar.
+Familiarity with Unix/Linux/Windows environments.
+Experience programming in Python, Java, or JavaScript.
+Understanding of Object-Oriented Programming (OOP) concepts.
+Knowledge of GeoSpatial solutions and databases (SQL, Oracle).
+Understanding of DevOps tools like GitHub, Jenkins, Docker, Ansible, Kubernetes, etc.
+Familiarity with Agile Methodology.
+Proficiency in MS Office Suite (Excel, Word, Access).
+Strong command of the English language; additional appreciation for other European languages is a plus.
+Excellent analytical and mathematical skills.
+Ability to accurately follow work process instructions."
+Data & AI Solution Architect,"Job Description:
+We are seeking a talented Data & AI Solution Architect to join our team. In this role, you will work closely with delivery teams and client stakeholders to provide technical leadership, drive architectural decisions, shape deals and propositions, create plans and roadmaps, and produce design artifacts. You will assist clients in their journey to Microsoft Azure or leverage their existing investment in it, with a significant focus on applying cloud architectural patterns and migration strategies. As a senior member of our technical community, you will provide coaching and mentoring to motivate and inspire more junior colleagues. Additionally, you will engage in early conversations with clients and sales teams, support origination and deal qualification, and become a trusted advisor throughout the sales process. Collaborating with other Solution Architects and SMEs, you will define solutions, drive them from conception to close, and articulate deal pricing.
+Responsibilities:
+Work closely with delivery teams and client stakeholders to provide technical leadership and drive architectural decisions.
+Shape deals and propositions, create plans and roadmaps, and produce design artifacts.
+Assist clients in their journey to Microsoft Azure or leverage their existing investment in it, focusing on cloud architectural patterns and migration strategies.
+Provide coaching and mentoring to junior colleagues, both within your team and across the organization.
+Engage in early conversations with clients and sales teams, support origination and deal qualification, and become a trusted advisor.
+Collaborate with other Solution Architects and SMEs to define solutions, drive them from conception to close, and articulate deal pricing.
+Skills and Experiences:
+Good working knowledge and experience in the Microsoft and partner ecosystem, understanding the roadmap to help clients implement Microsoft’s product evolution including Azure Open AI, Fabric, and Co-Pilot.
+Experience working with stakeholders to create technical visions, high-level architectures, and delivery roadmaps for large programs of work involving platforming/re-platforming Data Solutions within Azure cloud, utilizing tools such as Databricks and Synapse.
+Capability in creating design artifacts and presenting them for approval at architectural forums attended by multi-disciplined stakeholders from engineering to senior (""C level"") client executives.
+Experience in designing and delivering large-scale Data solutions using relevant approaches (Lakehouse, Data Mesh, Cloud Scale Analytics, etc.).
+Identifying and designing for key architectural characteristics such as performance, security, and reliability.
+"
+Cybersecurity Advisor,"Job Description:
+We are seeking a Cybersecurity Advisor to join our team, working with a leading organization in the field of cybersecurity/cyber defence dedicated to safeguarding digital assets and infrastructure within the Governmental sector. As part of our rapidly growing team, you will lead client engagements, consulting, advising, and building cybersecurity roadmaps and strategies. You will engage with C-Suite stakeholders to discuss risks, current threat landscapes, and articulate mitigations/controls and their impacts on risk reduction. Additionally, you will manage and lead cybersecurity transformation and implementation for Maritime clients, design and define cyber risk improvement plans, apply a high-level knowledge of technical and non-technical security controls and policies, and manage remediation planning while advising on improvements.
+Responsibilities:
+Consult, advise, and build cybersecurity roadmaps and strategies for clients within the Governmental sector.
+Engage with C-Suite stakeholders to discuss risks, threat landscapes, and mitigation/control strategies.
+Lead cybersecurity transformation and implementation for Maritime clients, including both Navy and commercial Maritime sectors.
+Design and define cyber risk improvement plans, applying technical and non-technical security controls and policies.
+Manage remediation planning and advise on improvements to enhance cybersecurity posture.
+Conduct and coordinate risk assessments to identify vulnerabilities and develop mitigation strategies.
+Skills and Qualifications:
+Experience with cybersecurity, IT delivery, and change management.
+Experience in analyzing cybersecurity risks and building improvement strategies, roadmaps, processes, controls, and policies.
+Experience in cyber defence program delivery and managing cybersecurity transformation projects.
+Ability to conduct and coordinate risk assessments to identify vulnerabilities and develop mitigation strategies.
+Strong communication and stakeholder management skills, with the ability to engage with C-Suite stakeholders effectively.
+"
+Internal Audit,"As the third line of defence, Internal Audit's mission is to independently assess the firm's internal control structure, including the firm's governance processes and controls, and risk management and capital and anti-financial crime frameworks, raise awareness of control risk and monitor the implementation of management's control measures.
+
+Responsibilities
+Communicates and reports on the effectiveness of the firm's governance, risk management and controls that mitigate current and evolving risk
+Raise awareness of control risk
+Assesses the firm's control culture and conduct risks
+Monitors management's implementation of control measures
+Performing regular risk assessments for the area of coverage 
+Regularly meeting the business/engineering stakeholders and building strong relationships with management 
+Continuously monitoring business and technology developments 
+Monitoring regulatory requirements and developments, as well as industry standards 
+Performing and leading audit work, including defining the scope of risks and controls assessment of controls design and effectiveness, reviewing audit work and reporting findings to internal and external management 
+Validating the closure of management action points 
+Managing, coaching and developing team members 
+Skills And Qualifications:
+A degree in Computer Science, Information Security, Engineering, or equivalent discipline. 
+Knowledge of financial markets, products and services. 
+Understanding of management, monitoring, operations, and disaster recovery of systems with high availability. 
+Experience with Data Analytics tools and techniques. 
+Ability to review/develop code (Java, C++, Python, etc.) 
+Cloud security / risk concepts, architecture, controls, implementation, and assessment. 
+Security within the software development lifecycle and Infrastructure as Code. 
+Vulnerability assessment and penetration testing methodologies and processes. 
+Security risks related to web, mobile, serverless and containerized applications, and network infrastructure. 
+Relevant technology standards and regulations – NIST Cyber Security Framework, Cloud Security Alliance CCM, FFIEC CAT, ISO 27001, GDPR, NYSDFS, data privacy rules, FFIEC IT handbooks etc. 
+Ability to work effectively across a large audit team, understanding the team's role in the overall strategy of the firm. 
+Written and verbal communication skills a must; strong interpersonal skills essential. Job requires frequent interaction with technology management. 
+Must be able to multitask while managing both time and workload. 
+Must be highly motivated with strong analytical skills, willing and able to learn new business and system processes quickly. 
+"
+Information Security Architect,"
+Job Description:
+As an Information Security Solution Architect, you will be responsible for aligning technology strategy with business goals and ensuring the delivery of high-quality, governed solution designs. You will develop and articulate current state physical and logical architectures, focusing specifically on infosec and related functional areas. Your role will involve evangelizing the adoption of future state technology architectures and coordinating the assessment of new technologies for effective introduction to the enterprise. Working closely with stakeholders across functions, you will become a strong partner to the business, influencing outcomes from ideation through to implementation. Additionally, you will cultivate relationships with technical stakeholders, ensuring architectural governance is applied uniformly, and influence Information Security direction and strategy.
+Responsibilities:
+Develop and articulate current state physical and logical architectures, particularly focusing on infosec and related functional areas.
+Evangelize the adoption of future state technology architectures and become the authority in this space.
+Coordinate the assessment of new technologies and their effective introduction to the enterprise.
+Work closely with stakeholders across functions, influencing outcomes from ideation through to implementation.
+Cultivate relationships with technical stakeholders, ensuring architectural governance is applied uniformly.
+Influence Information Security direction and strategy.
+Govern system designs to ensure appropriate patterns and standards are applied effectively.
+Drive better outcomes across the enterprise by questioning the status quo.
+Collaborate with the Architecture community and business stakeholders to build transformation roadmaps.
+Participate in the creation of RFI/RFP documentation and assessment of bid responses from external technology vendors.
+Contribute to the evolution and delivery of the IT strategy, working with IT stakeholders.
+Perform threat modeling of solutions to identify threats and countermeasures, articulating them in both technical and non-technical terms.
+Define secure technical patterns for newly identified components and verify them through testing.
+Skills and Experience:
+Good understanding of cloud security controls and tooling, preferably in AWS, GCP, or Azure.
+Understanding of secure coding and application design principles.
+Knowledge of the e-commerce threat landscape and experience applying relevant controls to mitigate those threats.
+Experience building strong security governance into guardrails and applying security controls iteratively in an agile/DevSecOps environment.
+Excellent communication and interpersonal skills.
+Practical experience of governing solutions in an architecture function.
+Flexibility, a desire to learn, and awareness of IT industry trends.
+Ability to plan and rationalize project goals and provide clear guidance for outcomes.
+Desirable certifications: CompTIA Security, CISM, CISSP, CEH, OSCP, CCSP, AWS Certified Solutions Architect, GCP Cloud Architect, Azure Solutions Architect.
+Broad understanding of current techniques and tooling, including API-first design, Cloud Native, Containerization, and PaaS.
+Experience working with Product or Agile teams and governing architectural designs for continuous delivery.
+Retail/e-commerce experience is a plus.
+"
+Software tester,"As a Software Tester, you will play a pivotal role in ensuring that our software solutions not only meet but exceed the quality standards our clients expect. Working closely with our dynamic team of developers, you will design and implement testing strategies, identify issues, and contribute to the product's overall excellence.
+Main responsibilities include:
+Create, maintain and execute high quality automated test scripts
+Design and develop test automation frameworks
+Maintain test documentation for automated processes
+Develop and configure test automation strategies.	Test Planning & Design: Design and create test cases and scripts to address business and technical use cases.
+Functional Testing: Assess and ensure the functional aspects of the application, based on our diverse tech stack.
+Performance Testing: Test the system's behavior under particular conditions, ensuring robustness and responsiveness.
+Collaboration: Work closely with developers to understand product specifics and to develop appropriate test environments.
+Bug Reporting & Management: Identify, log, and track bugs to resolution.
+Automation: Utilize and, when needed, create automation tools to streamline the testing process.
+Documentation: Document detailed test results, metrics, and provide feedback to the development team.
+
+Skills and qualifications requirements:
+Bachelor’s degree in computer science, information technology or a related field
+Proven experience with C#, JavaScript, Selenium and Playwright
+Excellent problem solving and analytical skills
+Knowledge and experience in the following would be desirable: CI/CD, Non-functional automated testing, Page object model and API mocking."
+Lead software tester,"Job Description:
+As a Lead Software Tester, your primary objective is to manage testing teams and ensure the successful testing of company software, guaranteeing stability, security, efficiency, and effectiveness of products and services. You will oversee all testing aspects throughout the project lifecycle, from initial development testing to final acceptance by stakeholders or customers. Acting as a team leader, mentor, and advisor, you will guide less experienced members of the testing team.
+Key Responsibilities:
+Manage daily tasks of testing teams across two locations.
+Mentor and coach testers within your teams.
+Lead the direction of the company’s test efforts, including scheduling, prioritization, and sequencing of testing activities.
+Drive improvements and adoption of test automation strategy.
+Perform hands-on test execution as needed, both automated and manual.
+Create and maintain a regression test suite, automated where appropriate.
+Plan and track defects resolution for the team.
+Ensure participation of the team in all phases of the development lifecycle to consider testing requirements.
+Identify appropriate testing tools across applications.
+Review product requirements, functional and design specifications to prepare test cases.
+Provide input for continuous improvement within the testing function and advocate for testing best practices.
+Ensure testing documentation is produced for new and existing applications.
+Collaborate closely with all stakeholders in SDLC and wider business teams.
+Plan training as needed to ensure regular skills development for the testing teams.
+Skills & Experience:
+Minimum 5 years of software testing experience, with ISQTB foundation level certification.
+Minimum 2 years of Test Lead experience or managing testers.
+Hands-on test automation experience with tools like Cypress, POSTMAN.
+Experience in implementing/contributing to an automation strategy.
+Strong understanding of relational databases and SQL query experience.
+Proficiency in testing within various SDLCs (Waterfall and Agile).
+Good knowledge of web technologies such as XML, HTML, JavaScript, CSS.
+Ideally, experience in Microsoft Technologies (.Net/C#).
+"
+Full stack software engineer,"Job Description:
+As a Full Stack Software Engineer, you will participate in various aspects of the software development lifecycle, including design, code implementation, testing, and support. Your primary focus will be creating software solutions that support clients' hybrid-cloud and AI journeys, utilizing the latest technologies to ensure high performance, availability, responsiveness, and maintainability.
+Responsibilities:
+Analyze, validate, and propose improvements to existing failures, collaborating with the architect and technical leader.
+Participate in every step of the development process, from design to testing, release changes, and troubleshooting, ensuring excellent customer service.
+Drive discussions with stakeholders and analyze the current landscape to identify opportunities for creative solutions.
+Skills and Qualifications:
+Backend or full stack development experience.
+Proficiency in JavaScript and NodeJS.
+Experience with automation.
+Preferred Skills and Qualifications:
+Knowledge of Java.
+Familiarity with Docker and Openshift.
+Experience with Camunda, Nginx, and LUA Auth.
+Understanding of ReactJS and KeystoneJS.
+Knowledge of MongoDB and OracleDB.
+Familiarity with Swagger for API documentation.
+"
+AI solutions analyst,"Job Description:
+As an AI Solutions Analyst, you will play a crucial role in driving organizational transformations for medium- and large-scale businesses by documenting, analyzing, and improving business processes. You will work within projects to map as-is processes to to-be processes, aligning them with the future operating model. Acting as a liaison between clients and project teams, you will coordinate and collaborate with stakeholders during workshops and contribute to the design and support of ongoing solutions post-transition. Additionally, you will collaborate with teammates on the analysis and design of complex business applications using the latest technologies, ensuring successful delivery of business solutions.
+Responsibilities:
+Document and analyze as-is processes (functional specs and user stories) and make recommendations for improvement by mapping to-be business processes aligned with the future operating model.
+Work within projects driving organizational transformations for medium- and large-scale businesses.
+Liaise between the client and a team consisting of SMEs, C-suite executives, Experience Designers, Product Managers, Consultant Developers, and QA.
+Coordinate and collaborate with all project stakeholders during workshops.
+Collaborate with teammates on the analysis and design of complex business applications using the latest technologies.
+Create and review test cases, coordinate with business stakeholders and end-users for user acceptance.
+Contribute to the design of ongoing solutions and provide user support required after transition.
+Work across multiple projects or smaller pieces of work to support the AI function when workflow is lighter.
+Skills and Qualifications Required:
+Master’s/Bachelor’s degree in Engineering (Computer Science).
+Proven track record of working with various geographically dispersed technical teams to deliver requirements and provide solutions.
+Ability to deliver business solutions for strategic projects and programs, balancing cost, quality, and time.
+Understanding of industry best practices, standards, tools, and methodologies.
+Ability to build and maintain effective relationships with internal and external stakeholders.
+Awareness of suitable KPIs associated with large-scale projects.
+Sound understanding of SDLC lifecycle and various methods of delivery.
+Strong analytical skills and ability to structure and communicate high-level and detailed business requirements effectively.
+Proficiency in business process modeling.
+Ability to prioritize and manage workloads within tight timescales and budgetary constraints.
+Experience in mapping out ‘as-is’ and ‘to-be’ landscapes and conducting gap analysis.
+Experience in business change, rationalization, and transformation.
+Ability to work independently, proactively, and adaptively in responding to changing circumstances.
+Attention to detail, excellent communication skills, and the ability to challenge sources where inconsistencies are found.
+"
