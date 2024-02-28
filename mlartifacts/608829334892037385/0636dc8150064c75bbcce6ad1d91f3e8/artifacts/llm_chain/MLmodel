@@ -1,0 +1,25 @@
+artifact_path: llm_chain
+flavors:
+  langchain:
+    code: null
+    langchain_version: 0.1.4
+    model_data: model.yaml
+    model_load: base_load
+    model_type: LLMChain
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.langchain
+    model_data: model.yaml
+    model_load: base_load
+    python_version: 3.11.0
+mlflow_version: 2.10.2
+model_size_bytes: 778
+model_uuid: 7c152c7134554654a87e9afe2ba7bd5d
+run_id: 0636dc8150064c75bbcce6ad1d91f3e8
+signature:
+  inputs: '[{"type": "string", "name": "question", "required": true}]'
+  outputs: '[{"type": "string", "name": "text", "required": true}]'
+  params: null
+utc_time_created: '2024-02-28 18:17:56.119642'

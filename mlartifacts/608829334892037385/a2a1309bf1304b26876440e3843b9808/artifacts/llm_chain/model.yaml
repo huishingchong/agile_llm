@@ -1,0 +1,44 @@
+_type: llm_chain
+llm:
+  _type: huggingface_hub
+  model_kwargs:
+    max_length: 1024
+    max_new_tokens: 200
+    temperature: 0.5
+  repo_id: tiiuae/falcon-7b-instruct
+  task: text-generation
+llm_kwargs: {}
+memory: null
+metadata: null
+name: null
+output_key: text
+output_parser:
+  _type: default
+  name: null
+prompt:
+  _type: prompt
+  input_types: {}
+  input_variables:
+  - question
+  metadata: null
+  name: null
+  output_parser: null
+  partial_variables: {}
+  tags: null
+  template: '
+
+    Please answer the question.
+
+    Answer professionally, and where appropriate, in a Computer Science educational
+    context.
+
+    Question: {question}
+
+    Response:
+
+    '
+  template_format: f-string
+  validate_template: false
+return_final_only: true
+tags: null
+verbose: true
