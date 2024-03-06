@@ -8,17 +8,15 @@ import gradio as gr
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from datasets import load_dataset
 from langchain_community.llms import HuggingFaceHub
-from langchain.chains import LLMChain, ConversationalRetrievalChain
+from langchain.chains import LLMChain, RetrievalQA
 from langchain.prompts import PromptTemplate
 from langchain.document_loaders.csv_loader import CSVLoader
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain.text_splitter import CharacterTextSplitter
+from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
+from langchain_community.llms import HuggingFaceEndpoint
 
-from pinecone import Pinecone, ServerlessSpec
-
-pc = Pinecone(api_key='YOUR_API_KEY')
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
@@ -29,32 +27,18 @@ if not huggingface_api_token:
     huggingface_api_token = getpass("Enter your Hugging Face Hub API token: ")
 
 # specify HuggingFace model
-model_name = "google/flan-t5-xxl"
-# model_name = "tiiuae/falcon-7b"
-llm = HuggingFaceHub(repo_id=model_name, model_kwargs={"temperature":0.5, "max_length":1024, "max_new_tokens":200})
+model_name = "tiiuae/falcon-7b-instruct"
+# llm = HuggingFaceHub(repo_id=model_name, model_kwargs={"temperature":0.5, "max_length":1024, "max_new_tokens":200})
 
+llm = HuggingFaceEndpoint(
+    repo_id=model_name,
+    model=model_name,
+    task="text-generation",
+    temperature=0.5,
+    # max_length:1024,
+    max_new_tokens=200
+)
 # prompting with langchain
-
-# template = """Question: {question}
-# Answer: """
-
-# template = """
-
-# You are a content recommender for a Computer Science Online Learning platform. 
-# Your task is to suggest educational content for a Computer Science learner. Given the user
-# input prompt, generate a reply with generated topic of educational content for learner
-# to learn to help fulfil their goal. Then suggest skills to learn based on current workforce demands.
-# An example scenario is 
-#     Question: What is Cybersecurity?
-#     Response: 
-#     Cybersecurity is the practice of securing information technology systems and networks from cyber attacks.
-#     To study Cybersecurity, you need to learn about different type of cyber attacks, for example, spoofing, phishing.
-#     Examples of current in-demand skills for a career in Cybersecurity is Vulnerability Assessment and Penetration Testing (VAPT) and scripting.
-# Follow the example scenario to produce a response.
-# Make sure to use specific Computer Science terms and correct, timely, factual information in the response.
-# Question: {question}
-# Response: 
-# """
 
 # template = """
 # You are a content recommender for a Computer Science Online Learning platform. 
@@ -66,52 +50,71 @@ llm = HuggingFaceHub(repo_id=model_name, model_kwargs={"temperature":0.5, "max_l
 # Response: 
 # """
 
-template= """
-Try to be helpful as you can in Computer Science context.
+template = """Use the following context to answer the question at the end. 
+If you don't know the answer, please think rationally and answer from your own knowledge base.
+Context: {context}
+
 Question: {question}
-Response:
+Answer: 
 """
 
+QA_CHAIN_PROMPT = PromptTemplate(template=template, input_variables=["context", "question"])
+
 prompt = PromptTemplate(template=template, input_variables=["question"])
-# llm_chain = LLMChain(prompt=prompt, llm=llm)
-llm_chain = load_qa_chain(llm, chain_type="stuff")
+llm_chain = LLMChain(prompt=prompt, llm=llm)
+# llm_chain = load_qa_chain(llm, chain_type="stuff")
+
+
+# API
 
 # RAG from synthetic data set
-loader = CSVLoader(file_path="rag_sample.csv")
+loader = CSVLoader(file_path="skills_build.csv")
 documents = loader.load() # load data for retrieval
-embeddings = HuggingFaceEmbeddings()
-text_split = CharacterTextSplitter(chunk_size=500, chunk_overlap=0)
+
+
+modelPath = "sentence-transformers/gtr-t5-base" # Using t5 sentence transformer model to generate embeddings
+model_kwargs = {'device':'cpu'}
+encode_kwargs = {'normalize_embeddings': True} # Normalizing embeddings may help improve similarity metrics by ensuring that embeddings magnitude does not affect the similarity scores
+
+# Initialise an instance of HuggingFaceEmbeddings
+embeddings = HuggingFaceEmbeddings(
+    model_name=modelPath,
+    model_kwargs=model_kwargs,
+    encode_kwargs=encode_kwargs
+)
+
+text_split = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
 d = text_split.split_documents(documents)
     # https://python.langchain.com/docs/integrations/vectorstores/faiss
 db = FAISS.from_documents(d, embeddings)
 
-#USE TOKENIZER?
-#HOW TO MAKE MODEL OUTPUT MORE? CHANGE MODEL??
-#USE JUPYTER??
-#AGREE ON EVALUATION
+chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
+qa = RetrievalQA.from_chain_type(llm=llm, 
+                                 retriever=db.as_retriever(), 
+                                 return_source_documents=True,
+                                 chain_type_kwargs=chain_type_kwargs, verbose=True)
 
 def chat_interface(textbox, chat):
-    docs = db.similarity_search(textbox)
-    input_dict = {'question': textbox, 'input_documents': docs }
-    response = llm_chain.run(input_dict)
+    input_dict = {'query': textbox}
+    result = qa.invoke(input_dict)
+    print(result)
+    text = result['result']
+    return text
 
-    print("user:", textbox)
-    print("bot:", response)
-    return response
-
-gr.ChatInterface(
-    fn=chat_interface,
-    chatbot=gr.Chatbot(height=300),
-    textbox=gr.Textbox(placeholder="Ask me a question", container=False, scale=7),
-    title="Chatbot",
-    description="Ask Chatbot any question",
-    theme="soft",
-    examples=["What does AI stand for?", "What is Software Engineering?", "What is Cybersecurity?"],
-    cache_examples=False,
-    retry_btn=None,
-    undo_btn="Delete Previous",
-    clear_btn="Clear",
-).launch()
+def main():
+    gr.ChatInterface(
+        fn=chat_interface,
+        chatbot=gr.Chatbot(height=300),
+        textbox=gr.Textbox(placeholder="Ask me a question", container=False, scale=7),
+        title="Chatbot",
+        description="Ask Chatbot any question",
+        theme="soft",
+        examples=["What does AI stand for?", "What is Software Engineering?", "What is Cybersecurity?"],
+        cache_examples=False,
+        retry_btn=None,
+        undo_btn="Delete Previous",
+        clear_btn="Clear",
+    ).launch()
 
 # Fine-tune LLM?
     # Prepare dataset containing input output example types
@@ -146,3 +149,6 @@ gr.ChatInterface(
 
 
 # Evaluation
+
+if __name__ == "__main__":
+    main()
