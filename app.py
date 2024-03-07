@@ -89,7 +89,6 @@ def cleanhtml(raw_html):
 def create_jobs_csv(job_name, location):
     # Construct the request URL
     job_name = cleanhtml(job_name)
-    # job_name = "\'" + job_name + "\'"
     search_url = f'{BASE_URL}?keywords={job_name}&locationName={location}'
     print(search_url)
     # Send the request
@@ -129,46 +128,111 @@ def create_jobs_csv(job_name, location):
 
 
 @tool
-def get_job(query: str) -> str:
+def get_job(query):
     """Returns the subject of the sentence, helper function to feed into job search."""
-    helper_template = """Given a sentence, please output only the subject of the sentence, give one or two words.
+    helper_template = """
     Sentence: {query}
-    Answer: 
+    Output only the subject of the sentence, give one or two words.
     """
     prompt = PromptTemplate(template=helper_template, input_variables=["query"])
+    model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+    llm = HuggingFaceEndpoint(
+        repo_id=model_name,
+        model=model_name,
+        task="text-generation",
+        temperature=0.5,
+        # max_length:1024,
+        max_new_tokens=200
+    )
     helper_llm = LLMChain(llm=llm, prompt=prompt, verbose=True)
+    print(helper_llm)
     response = helper_llm.invoke(input=query)
-    return response["text"]
+    text = response["text"]
+    # if "\n" in text:
+    #     text = text.split("\n")[1].strip()
+    return text
+
+keywords = {
+    "software engineer": "Software Engineer",
+    "web developer": "Web Developer",
+    "data analyst": "Data Analyst",
+    "cybersecurity": "Cybersecurity",
+    "data science": "Data Science",
+    "ai": "artificial intelligence",
+    "artificial intelligence": "artificial intelligence"
+}
+
+# def identify_job_name(query: str, keywords: dict) -> str:
+#     """Identify the job name from the query string based on the dictionary of keywords."""
+#     job_name = ""
+#     for keyword, job_name_candidate in keywords.items():
+#         print(keyword)
+#         if keyword.lower() in query.lower():
+#             print("YES")
+#             job_name = job_name_candidate
+#             break  # Stop iterating once a match is found
+#     print("THE JOB NAME IS", job_name)
+#     return job_name
+
+
+# def identify_job_name(query, keywords):
+#     job_name = ""
+#     for i in keywords:
+#         if i.lower() in query.lower():
+#             job_name = i
+#     return job_name
+
+def chat_interf(textbox, chat):
+    subject = get_job(textbox)
+    # subject = identify_job_name(textbox, keywords)
+    if subject != "":
+        create_jobs_csv(subject, "london")
+        input_dict = {'query': textbox}
+
+        loader = CSVLoader(file_path="job_listings.csv")
+        documents = loader.load() # load data for retrieval
+
+        d = text_split.split_documents(documents)
+        db = FAISS.from_documents(d, embeddings)
+
+        chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
+        qa = RetrievalQA.from_chain_type(llm=llm, 
+                                        retriever=db.as_retriever(), 
+                                        return_source_documents=True,
+                                        chain_type_kwargs=chain_type_kwargs, verbose=True)
+        
+        # agent = create_csv_agent(
+        #     llm,
+        #     "job_listings.csv",
+        #     verbose=True,
+        #     agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+        # )
+        # res = agent.invoke(input_dict)
+        result = qa.invoke(input_dict)
+        print(result.get("source_documents", []))
+        text = result['result']
+        return text
+    else:
+        print("TAKING ELSE ROUTE")
+        template= """
+        Please answer the question.
+        Answer professionally, and where appropriate, in a Computer Science educational context.
+        Question: {question}
+        Response:
+        """
+        prompt = PromptTemplate(template=template, input_variables=["question"])
+        llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=True)
+        input_dict = {'question': textbox}
+        response_dict = llm_chain.invoke(input_dict)
+        response = response_dict['text'].split("Response:")[1].strip()
+        return response
+    return subject
+
 
 def chat_interface(textbox, chat):
-    subject = get_job(textbox)
-    print(subject)
-    create_jobs_csv(subject, "london")
-    input_dict = {'query': textbox}
-
-    loader = CSVLoader(file_path="job_listings.csv")
-    documents = loader.load() # load data for retrieval
-
-    d = text_split.split_documents(documents)
-    db = FAISS.from_documents(d, embeddings)
-
-    chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
-    qa = RetrievalQA.from_chain_type(llm=llm, 
-                                    retriever=db.as_retriever(), 
-                                    return_source_documents=True,
-                                    chain_type_kwargs=chain_type_kwargs, verbose=True)
-
-    agent = create_csv_agent(
-        llm,
-        "job_listings.csv",
-        verbose=True,
-        agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
-    )
-    res = agent.run(textbox)
-    # result = qa.invoke(input_dict)
-    print(res)
-    # text = result['result']
-    return res
+    answer = get_job(textbox)
+    print("the answer is:", answer)
+    return answer
 
 def main():
     # search_url = f'{BASE_URL}?keywords="itconsultant"&locationName='
@@ -178,10 +242,10 @@ def main():
     #     print(job_listings)
     # else:
     #     ("ERROR", search_response.status_code)
-    create_jobs_csv("consultant", "london")
+    # create_jobs_csv("consultant", "london")
 
     gr.ChatInterface(
-        fn=chat_interface,
+        fn=chat_interf,
         chatbot=gr.Chatbot(height=300),
         textbox=gr.Textbox(placeholder="Ask me a question", container=False, scale=7),
         title="Chatbot",
@@ -193,6 +257,39 @@ def main():
         undo_btn="Delete Previous",
         clear_btn="Clear",
     ).launch()
+    
+    # PREFIX = """Answer the following questions as best you can. You have access to the following tools:"""
+    # FORMAT_INSTRUCTIONS = """Use the following format:
+    # Question: the input question you must answer
+    # Thought: you should always think about what to do
+    # Action: the action to take, should be one of [{tool_names}]
+    # Action Input: the input to the action
+    # Observation: the result of the action
+    # ... (this Thought/Action/Action Input/Observation can repeat N times)
+    # Thought: I now know the final answer
+    # Final Answer: the final answer to the original input question"""
+    
+    # SUFFIX = """Begin!
+    # Question: {input}    """
+    # agent = create_csv_agent(
+    #     llm,
+    #     "rag_sample.csv",
+    #     verbose=True,
+    #     agent_executor_kwargs={
+    #         "handle_parsing_errors": True,
+    #         'prefix':PREFIX,
+    #         'format_instructions':FORMAT_INSTRUCTIONS,
+    #         'suffix':SUFFIX
+    #     }
+        # agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    # )
+
+    # textbox = "how many rows are there?"
+    # input_dict = {'input': textbox}
+    # # res = agent.invoke(input_dict)
+    # res = agent.run(input_dict)
+    # print(res)
+
 
 if __name__ == "__main__":
     main()
