@@ -4,6 +4,9 @@ from dotenv import load_dotenv
 import os
 from pathlib import Path
 import gradio as gr
+from requests import get
+import csv
+import re
 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from datasets import load_dataset
@@ -16,7 +19,9 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain_community.llms import HuggingFaceEndpoint
-
+from langchain.agents import tool, AgentExecutor
+from langchain_experimental.agents.agent_toolkits import create_csv_agent
+from langchain.agents.agent_types import AgentType
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
@@ -28,8 +33,6 @@ if not huggingface_api_token:
 
 # specify HuggingFace model
 model_name = "tiiuae/falcon-7b-instruct"
-# llm = HuggingFaceHub(repo_id=model_name, model_kwargs={"temperature":0.5, "max_length":1024, "max_new_tokens":200})
-
 llm = HuggingFaceEndpoint(
     repo_id=model_name,
     model=model_name,
@@ -61,22 +64,11 @@ Answer:
 QA_CHAIN_PROMPT = PromptTemplate(template=template, input_variables=["context", "question"])
 
 prompt = PromptTemplate(template=template, input_variables=["question"])
-llm_chain = LLMChain(prompt=prompt, llm=llm)
-# llm_chain = load_qa_chain(llm, chain_type="stuff")
 
-
-# API
-
-# RAG from synthetic data set
-loader = CSVLoader(file_path="skills_build.csv")
-documents = loader.load() # load data for retrieval
-
-
+# Initialise an instance of HuggingFaceEmbeddings
 modelPath = "sentence-transformers/gtr-t5-base" # Using t5 sentence transformer model to generate embeddings
 model_kwargs = {'device':'cpu'}
 encode_kwargs = {'normalize_embeddings': True} # Normalizing embeddings may help improve similarity metrics by ensuring that embeddings magnitude does not affect the similarity scores
-
-# Initialise an instance of HuggingFaceEmbeddings
 embeddings = HuggingFaceEmbeddings(
     model_name=modelPath,
     model_kwargs=model_kwargs,
@@ -84,24 +76,110 @@ embeddings = HuggingFaceEmbeddings(
 )
 
 text_split = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
-d = text_split.split_documents(documents)
-    # https://python.langchain.com/docs/integrations/vectorstores/faiss
-db = FAISS.from_documents(d, embeddings)
 
-chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
-qa = RetrievalQA.from_chain_type(llm=llm, 
-                                 retriever=db.as_retriever(), 
-                                 return_source_documents=True,
-                                 chain_type_kwargs=chain_type_kwargs, verbose=True)
+# API
+reed_key = os.getenv('REED_API_KEY')
+BASE_URL = 'https://www.reed.co.uk/api/1.0/search'
+
+CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
+def cleanhtml(raw_html):
+  cleantext = re.sub(CLEANR, '', raw_html)
+  return cleantext
+
+def create_jobs_csv(job_name, location):
+    # Construct the request URL
+    job_name = cleanhtml(job_name)
+    # job_name = "\'" + job_name + "\'"
+    search_url = f'{BASE_URL}?keywords={job_name}&locationName={location}'
+    print(search_url)
+    # Send the request
+    search_response = get(search_url, auth=(reed_key, '')) # authentication header as the username, with the password left empty
+    # Check if the request was successful
+    if search_response.status_code == 200:
+        job_listings = search_response.json()
+        
+        # Create or overwrite the CSV file
+        with open('job_listings.csv', 'w', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['Job Title', 'Job Description', 'Location', 'Part-time', 'Full-time', 'Graduate', 'Minimum Salary'] 
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            
+            writer.writeheader()
+            
+            # Iterate through job listings
+            for job in job_listings["results"]:
+                len(job_listings["results"])
+                job_id = job["jobId"]
+                details_url = f'https://www.reed.co.uk/api/1.0/jobs/{job_id}'
+                detail_response = get(details_url, auth=(reed_key, ''))
+                detail = detail_response.json()
+                job_title = detail.get("jobTitle", "")
+                job_description = cleanhtml(detail.get("jobDescription", ""))
+                location = detail.get("locationName", "")
+                graduate = detail.get("graduate", "")
+                keywords = detail.get("keywords", "")
+                part_time = detail.get("partTime", "")
+                full_time = detail.get("fullTime", "")
+                min_salary = detail.get("minimumSalary", "")
+                # Write job details to CSV
+                writer.writerow({'Job Title': job_title, 'Job Description': job_description, 'Location': location, "Part-time": part_time, "Full-time": full_time, 'Graduate': graduate, 'Minimum Salary': min_salary})
+    else:
+        print(f'Error: {search_response.status_code}')
+
+# agent_executor = AgentExecutor(agent=qa, tools=tools, verbose=True)
+
+
+@tool
+def get_job(query: str) -> str:
+    """Returns the subject of the sentence, helper function to feed into job search."""
+    helper_template = """Given a sentence, please output only the subject of the sentence, give one or two words.
+    Sentence: {query}
+    Answer: 
+    """
+    prompt = PromptTemplate(template=helper_template, input_variables=["query"])
+    helper_llm = LLMChain(llm=llm, prompt=prompt, verbose=True)
+    response = helper_llm.invoke(input=query)
+    return response["text"]
 
 def chat_interface(textbox, chat):
+    subject = get_job(textbox)
+    print(subject)
+    create_jobs_csv(subject, "london")
     input_dict = {'query': textbox}
-    result = qa.invoke(input_dict)
-    print(result)
-    text = result['result']
-    return text
+
+    loader = CSVLoader(file_path="job_listings.csv")
+    documents = loader.load() # load data for retrieval
+
+    d = text_split.split_documents(documents)
+    db = FAISS.from_documents(d, embeddings)
+
+    chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
+    qa = RetrievalQA.from_chain_type(llm=llm, 
+                                    retriever=db.as_retriever(), 
+                                    return_source_documents=True,
+                                    chain_type_kwargs=chain_type_kwargs, verbose=True)
+
+    agent = create_csv_agent(
+        llm,
+        "job_listings.csv",
+        verbose=True,
+        agent_type=AgentType.ZERO_SHOT_REACT_DESCRIPTION,
+    )
+    res = agent.run(textbox)
+    # result = qa.invoke(input_dict)
+    print(res)
+    # text = result['result']
+    return res
 
 def main():
+    # search_url = f'{BASE_URL}?keywords="itconsultant"&locationName='
+    # search_response = get(search_url, auth=(reed_key, '')) # authentication header as the username, with the password left empty
+    # if search_response.status_code == 200:
+    #     job_listings = search_response.json()
+    #     print(job_listings)
+    # else:
+    #     ("ERROR", search_response.status_code)
+    create_jobs_csv("consultant", "london")
+
     gr.ChatInterface(
         fn=chat_interface,
         chatbot=gr.Chatbot(height=300),
@@ -115,40 +193,6 @@ def main():
         undo_btn="Delete Previous",
         clear_btn="Clear",
     ).launch()
-
-# Fine-tune LLM?
-    # Prepare dataset containing input output example types
-    # Load dataset from HuggingFace
-# dataset = load_dataset("Locutusque/UltraTextbooks")
-
-# data = load_dataset("wikipedia", "20220301.simple", split='train[:10000]')
-# data = load_dataset('fever', 'wiki_pages')
-# data["train"][100]
-# tokenizer = AutoTokenizer.from_pretrained(model_name)
-# def tokenize_function(examples):
-#     return tokenizer(examples["text"], padding="max_length", truncation=True)
-
-# tokenized_datasets = data.map(tokenize_function, batched=True)
-# print(tokenized_datasets)
-
-
-# pinecone_api_key = os.getenv("PINECONE_API_KEY")
-# pc = Pinecone(api_key=api_key)
-# pc.create_index(
-#     name="quickstart",
-#     dimension=8,
-#     metric="euclidean",
-#     spec=ServerlessSpec(
-#         cloud='aws', 
-#         region='us-west-2'
-#     )
-# )
-
-
-# RAG from Wikipedia
-
-
-# Evaluation
 
 if __name__ == "__main__":
     main()
