@@ -23,26 +23,6 @@ from langchain_community.llms import HuggingFaceEndpoint
 from langchain.agents import tool, AgentExecutor
 from langchain_experimental.agents.agent_toolkits import create_csv_agent
 from langchain.agents.agent_types import AgentType
-from evaluate import load
-from UniEval.utils import convert_to_json
-from UniEval.metric.evaluator import get_evaluator
-
-def generate_bert_results_table(eval_data):
-    ref_texts = eval_data['ground_truth']
-    predictions = eval_data['predictions']
-
-    # Compute BERTScore
-    bertscore = load("bertscore")
-    results = bertscore.compute(predictions=predictions, references=ref_texts, model_type="distilbert-base-uncased")
-
-    # Create DataFrame from BERTScore results
-    bert_results_table = pd.DataFrame(results, index=range(0, len(results['precision'])))
-    bert_results_table['question'] = eval_data['question']
-
-    bert_results_table.drop(columns=['hashcode'], inplace=True)
-    bert_results_table = bert_results_table[['question', 'precision', 'recall', 'f1']]
-
-    return bert_results_table
 
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
@@ -265,15 +245,6 @@ def main():
             "Career opportunities for individuals in cybersecurity risk management include roles such as cybersecurity risk analysts, security consultants, risk managers, compliance officers, and cybersecurity architects. These professionals play a critical role in identifying, evaluating, and prioritizing cybersecurity risks, developing risk mitigation strategies, and ensuring compliance with regulatory requirements and industry standards. With the ever-evolving threat landscape and the increasing complexity of cybersecurity challenges, individuals with expertise in cybersecurity risk management can expect to have a wide range of career opportunities and advancement prospects in both the public and private sectors, including government agencies, financial institutions, healthcare organizations, and consulting firms. Additionally, obtaining relevant certifications such as Certified Information Systems Security Professional (CISSP), Certified Information Security Manager (CISM), or Certified Risk and Information Systems Control (CRISC) can further enhance career prospects and credibility in the field.",
         ]
     })
-    rag_data_cs_industry = generate_bert_results_table(data_cs_industry)
-    task = 'fact'
-
-    src_list = rag_data_cs_industry["source_documents"]
-    output_list = rag_data_cs_industry["predictions"]
-    data = convert_to_json(output_list=output_list, src_list=src_list)
-    evaluator = get_evaluator(task)
-    eval_scores = evaluator.evaluate(data, print_result=True)
-    print(eval_scores)
 
     gr.ChatInterface(
         fn=chat_interface,
@@ -320,8 +291,6 @@ def main():
     # # res = agent.invoke(input_dict)
     # res = agent.run(input_dict)
     # print(res)
-
-##OUTPUT CSV?
 
 if __name__ == "__main__":
     main()
