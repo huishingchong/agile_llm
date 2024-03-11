@@ -73,7 +73,8 @@ def get_job(query):
     The output is:
     """
     prompt = PromptTemplate(template=helper_template, input_variables=["query"])
-    model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+    model_name = "tiiuae/falcon-7b-instruct"
+
     llm = HuggingFaceEndpoint(
         repo_id=model_name,
         model=model_name,
@@ -81,7 +82,7 @@ def get_job(query):
         temperature=0.5,
         max_new_tokens=200
     )
-    helper_llm = LLMChain(llm=llm, prompt=prompt, verbose=True)
+    helper_llm = LLMChain(llm=llm, prompt=prompt)
     print(helper_llm)
     response = helper_llm.invoke(input=query)
     text = response["text"]
@@ -176,7 +177,6 @@ def main():
                 text = result['result']
                 return text
             else: # If no jobs are found, normal prompting and response is done
-                print("TAKING ELSE ROUTE")
                 llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=True)
                 input_dict = {'question': textbox}
                 response_dict = llm_chain.invoke(input_dict)
