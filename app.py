@@ -69,8 +69,8 @@ def get_job(query):
     The output is:
     """
     prompt = PromptTemplate(template=helper_template, input_variables=["query"])
-    model_name = "tiiuae/falcon-7b-instruct"
-
+    # model_name = "tiiuae/falcon-7b-instruct"
+    model_name = "mistralai/Mistral-7B-Instruct-v0.1"
     llm = HuggingFaceEndpoint(
         repo_id=model_name,
         model=model_name,
@@ -99,8 +99,8 @@ def main():
         huggingface_api_token = getpass("Enter your Hugging Face Hub API token: ")
 
     # Specify HuggingFace model
-    # model_name = "tiiuae/falcon-7b-instruct"
-    model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+    model_name = "tiiuae/falcon-7b-instruct"
+    
     llm = HuggingFaceEndpoint(
         repo_id=model_name,
         model=model_name,
