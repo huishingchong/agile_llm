@@ -20,44 +20,42 @@ from langchain_community.vectorstores import FAISS
 env_path = Path('.') / '.env'
 load_dotenv(dotenv_path=env_path)
 
-def create_jobs_csv(job_name, location, reed_key):
-    """Function to create a CSV file with job listings requested from the API."""
+def query_job_listings(job_name, location, reed_key):
+    """Function to query job listings from the API."""
     BASE_URL = 'https://www.reed.co.uk/api/1.0/search'
     # Construct the request URL
-    job_name = cleanhtml(job_name)
     search_url = f'{BASE_URL}?keywords={job_name}&locationName={location}'
-    # Send the request
-    search_response = get(search_url, auth=(reed_key, '')) # authentication header as the username, with the password left empty
+    search_response = get(search_url, auth=(reed_key, ''))  # authentication header as the username, with the password left empty
     
     # Check if the request was successful
     if search_response.status_code == 200:
-        job_listings = search_response.json()
-        
-        # Create or overwrite the CSV file
-        with open('job_listings.csv', 'w', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['Job Title', 'Job Description', 'Location', 'Part-time', 'Full-time', 'Graduate', 'Minimum Salary'] 
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            writer.writeheader()
-            
-            # Iterate through job listings
-            for job in job_listings["results"]:
-                len(job_listings["results"])
-                job_id = job["jobId"]
-                details_url = f'https://www.reed.co.uk/api/1.0/jobs/{job_id}'
-                detail_response = get(details_url, auth=(reed_key, ''))
-                detail = detail_response.json()
-                job_title = detail.get("jobTitle", "")
-                job_description = cleanhtml(detail.get("jobDescription", ""))
-                location = detail.get("locationName", "")
-                graduate = detail.get("graduate", "")
-                keywords = detail.get("keywords", "")
-                part_time = detail.get("partTime", "")
-                full_time = detail.get("fullTime", "")
-                min_salary = detail.get("minimumSalary", "")
-                # Write job details to CSV
-                writer.writerow({'Job Title': job_title, 'Job Description': job_description, 'Location': location, "Part-time": part_time, "Full-time": full_time, 'Graduate': graduate, 'Minimum Salary': min_salary})
+        job_listings = search_response.json()["results"]
+        return job_listings
     else:
         print(f'Error: {search_response.status_code}')
+        return []
+
+def create_jobs_csv(job_listings, reed_key):
+    """Function to create a CSV file with details of job listings."""
+    with open('job_listings.csv', 'w', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['Job Title', 'Job Description', 'Location', 'Part-time', 'Full-time'] 
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        writer.writeheader()
+        
+        # Iterate through job listings to collect required details of each job into csv file
+        for job in job_listings:
+            job_id = job["jobId"]
+            details_url = f'https://www.reed.co.uk/api/1.0/jobs/{job_id}'
+            detail_response = get(details_url, auth=(reed_key, ''))
+            detail = detail_response.json()
+            job_title = detail.get("jobTitle", "")
+            job_description = clean_html(detail.get("jobDescription", ""))
+            location = detail.get("locationName", "")
+            keywords = detail.get("keywords", "")
+            part_time = detail.get("partTime", "")
+            full_time = detail.get("fullTime", "")
+            # Write job details to CSV
+            writer.writerow({'Job Title': job_title, 'Job Description': job_description, 'Location': location, "Part-time": part_time, "Full-time": full_time})
 
 def get_job(query):
     """Helper function that returns the CS subject of the sentence to feed into job search."""
@@ -79,14 +77,11 @@ def get_job(query):
         max_new_tokens=200
     )
     helper_llm = LLMChain(llm=llm, prompt=prompt)
-    print(helper_llm)
     response = helper_llm.invoke(input=query)
     text = response["text"]
-    # if "\n" in text:
-    #     text = text.split("\n")[1].strip()
     return text
 
-def cleanhtml(raw_html):
+def clean_html(raw_html):
     """Helper function to clean HTML tags from text."""
     CLEANR = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
     cleantext = re.sub(CLEANR, '', raw_html)
@@ -95,12 +90,9 @@ def cleanhtml(raw_html):
 def main():
     # Get Hugging Face Hub API token
     huggingface_api_token = os.getenv('HUGGINGFACEHUB_API_TOKEN')
-    if not huggingface_api_token:
-        huggingface_api_token = getpass("Enter your Hugging Face Hub API token: ")
 
     # Specify HuggingFace model
     model_name = "tiiuae/falcon-7b-instruct"
-    
     llm = HuggingFaceEndpoint(
         repo_id=model_name,
         model=model_name,
@@ -145,9 +137,9 @@ def main():
     # Define chat interface function
     def chat_interface(textbox, chat):
         subject = get_job(textbox) # Find keywords to search jobs in API
-        print("subject is", subject)
-        
-        create_jobs_csv(subject, "london", reed_key)
+        job_listings = query_job_listings(clean_html(subject), "london", reed_key)
+        create_jobs_csv(job_listings, reed_key)
+
         with open('job_listings.csv', 'r', encoding='utf-8') as csvfile:
             reader = csv.reader(csvfile)
             next(reader)  # Skip header
@@ -167,9 +159,6 @@ def main():
                 
                 input_dict = {'query': textbox}
                 result = qa.invoke(input_dict)
-                documents = result.get("source_documents", [])
-                for i in documents:
-                    print(i)
                 text = result['result']
                 return text
             else: # If no jobs are found, normal prompting and response is done
