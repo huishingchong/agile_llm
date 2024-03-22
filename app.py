@@ -137,7 +137,8 @@ def main():
     # Define chat interface function
     def chat_interface(textbox, chat):
         subject = get_job(textbox) # Find keywords to search jobs in API
-        job_listings = query_job_listings(clean_html(subject), "london", reed_key)
+        location = ""
+        job_listings = query_job_listings(clean_html(subject), location, reed_key)
         create_jobs_csv(job_listings, reed_key)
 
         with open('job_listings.csv', 'r', encoding='utf-8') as csvfile:
