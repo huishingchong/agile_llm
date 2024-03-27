@@ -59,10 +59,15 @@ class TestApp(unittest.TestCase):
         self.assertFalse(job_listings)
 
 
-    def test_get_job_successfully_extracts_query_from_query(self):
+    def test_get_job_successfully_extracts_correct_keyword_from_query(self):
         # Test that LLM is returning correct keyword from query
         job_title = get_job("What are the responsibilities of a data scientist?")
         self.assertIn("data scientist", job_title)
+
+    def test_get_job_successfully_extracts_correct_keyword_from_another_query(self):
+        # Test that LLM is returning correct keyword from query
+        job_title = get_job("Tell me about the emerging skills in computer vision industry.")
+        self.assertIn("computer vision", job_title)
 
     def test_clean_html_get_rids_of_tags_from_input_text(self):
         # Test if clean_html helper function removes html tags properly
