@@ -2,225 +2,217 @@ question,ground_truth,source_documents,predictions
 Can you give me a typical job description of graduate role for Software Engineering?,,"Job Title: Software Engineer
 Job Title: Software Engineer
 Job Title: Software Engineer
-","A typical job description for a graduate role in Software Engineering might include responsibilities such as:
-
-1. Developing software applications and systems according to specifications
-2. Analyzing system requirements and suggesting modifications
-3. Writing code, testing, and debugging software programs
-4. Collaborating with team members to maintain and update software systems
-5. Documenting software components and configurations
-6. Troubleshooting and resolving software issues
-7. Developing and maintaining software automation scripts
-8. Designing and coding user interfaces
-9. Developing and maintaining software testing frameworks
-10. Collaborating with project managers, developers, and other IT professionals to ensure the successful delivery of software projects."
+","
+As a graduate software engineer, you will be responsible for developing and maintaining software applications. You will work closely with other software engineers, project managers, and clients to create and test software products. Your responsibilities may include designing and coding software components, testing and debugging software, and creating user manuals. You should have a strong understanding of programming languages, software development methodologies, and database systems."
 Can you give an example job description for a Software Engineer intern?,,"Job Description: JOB AD: The accepted interns will have the opportunity to work on diverse fields of AI as a member of the Advanced Research Team, including but not limited to machine learning, optimization theory, computer vision, pattern recognition, evolutionary computing, image  and video processing, speech processing, natural language processing and understanding. In the application process, we'll work with you to find the opportunity that best aligns with your interests and background. During the internship, the interns are paired with mentors and expected to collaborate with other interns and research engineers. Interns are encouraged and supported to contribute to local and international research communities and efforts by preparing  high quality patent proposals and research papers (being listed as an author) with reproducible code for submission to top-tier conferences and journals. Role and Responsibilities Cutting-edge research to develop state-of-the-art solutions to
 least one first-author publication in one of the following conferences and journals: NeurIPS, ICML, ICLR, CVPR, ICCV, ECCV, AAAI, InterSpeech, EMNLP, ACL, STOC, COLT, AISTATS, UAI, MobiComm, IEEE TPAMI, IEEE TNNLS, IEEE TSP, IEEE TIP, IEEE IoT, Information  Fusion, JAIR, IJRR, IJCV, and JMLR. Additional:  Experience in software libraries and toolboxes such as Tensorflow, PyTorch, SciKits, Kaldi, OpenCV and CUDA.Experience in software engineering and development. Relevant work experience as an intern or a researcher in an RD Lab. in academy or industry.Ability to design and execute a research agenda.
 Job Title: AI Research Intern
 ","
 If you don't know the answer, please think rationally and answer from your own knowledge base.
 
-Job Description:
+Context: Job Description: We are looking for a software engineer intern to join our team. The intern will be working on a variety of projects, including but not limited to developing web applications, creating user interfaces, and designing software architecture. We are looking for someone who is passionate about coding and has a strong knowledge of programming languages such as Java, Python, and C++. The intern will also have the opportunity to work on projects related to machine learning, data analysis, and software development.
 
-We are looking for a passionate and motivated Software Engineer intern to join our team. The intern will work with our team to develop and maintain our product offerings.
+Role and Responsibilities:
 
-Responsibilities:
-
-1. Develop and maintain our product offerings
-2. Work with a team to design and implement new features
-3. Collaborate with a team to troubleshoot and resolve issues
-4. Research and develop new technologies
-5. Analyze and test code for bugs and errors
-6. Write unit tests and perform code reviews
-7. Work on a variety of projects
-
-Requirements:
-
-1. Experience with programming languages such as Java, C++, and Python
-2. Experience with software development practices such as Agile, Scrum, and Kanban
-3. Experience with database systems such as MySQL and MongoDB
-4. Experience with front-end development frameworks"
+1. Develop software applications using coding languages such as Java, Python, and C++.
+2. Create user interfaces for software applications.
+3. Design software architecture and development plans.
+4. Collaborate with other software engineers and developers to ensure code quality and efficiency.
+5. Follow coding best practices, such as writing clean and organized"
 What particular skills do recruiters look for in a Web developer?,,"all the tools you need to carry out your role. You will get to experience a truly diverse range of  tasks, frequently getting the opportunity to learn new technologies, skills, and processes.  The Web Developer will be working closely with the Director to make sure projects are being completed to the highest standard. This will include liaising with team members, clients and have a consultative approach on new and existing projects. This is an  ideal role for someone who wants to make a positive contribution to a development team. You will have the opportunity to shape and finesse the approach and technology roadmap.  Key skills required:  Proven commercial experienceWordPressACFHTMLCSSPHPMySQLJavaScriptGit Version ControlAdobe Software including Photoshop, Illustrator and XD Desired Skills:  Ecommerce, Magento or WoocommerceGoogle AnalyticsCloudflare or Hubspot It is essential that all Web Developers have first class communication skills - both written and verbal. Candidates will be
 Job Description: Web Developer - Job DescriptionOverviewAre you a budding Web Developer looking to make a significant impact in a dynamic team? Join us as we expand our digital footprint across multiple recruitment brands. This role is perfect for self-motivated individuals with a flair for innovative solutions.Key Responsibilities· Enhance and support over 80 group websites.· Undertake custom website builds and develop our next-generation group platform.· Create modular components and reusable functionality.· Integrate with various internal and external APIs.· Transition websites to cloud-based solutions.· Manage pipeline configuration, deployments, and continuous integration.· Contribute to team efforts and build knowledge of business systems, APIs, and services.Skills and ExperienceEssential Experience:· C# (.NET, .NET Core)· Umbraco (v7)· HTML5· CSS (SASS/SCSS, Tailwind)· JavaScript (ES6)· Experience with modern front-end frameworks (Vue is preferred)· Bootstrap· MVC pattern·
 visually appealing web solutions.Implement SEO best practices to improve website visibility and drive organic traffic to our digital properties.Stay abreast of industry trends and emerging technologies to recommend innovative strategies for improving our online presence. Requirements:  Proven experience as a Web Developer or similar role, with a strong portfolio demonstrating your proficiency in web development.Expertise in front-end technologies such as HTML5, CSS3, JavaScript, and jQuery, with a focus on creating responsive and mobile-friendly designs.Knowledge or unedrstading of back-end development skills such as C#, .Net, MVC or PHPFamiliarity with CMS platforms (e.g., WordPress, Joomla) and e-commerce systems (e.g., Magento, BigCommerce).Understanding of web development and coding best practises along with SEO principles and techniques, with the ability to implement on-page optimisation strategies.Strong problem-solving skills and attention to detail, with a passion for
-","Recruiting for a Web developer can be a challenging task. The skills and experience required for this role vary depending on the company and the job requirements. However, some of the most important skills that recruiters look for in a Web developer include:
-
-1. Programming: A Web developer should have knowledge of programming languages such as HTML, CSS, JavaScript, and PHP. They should also be proficient in coding and development tools like Visual Studio or Sublime Text.
-
-2. Design: A Web developer should be able to create visually appealing and user-friendly websites. They should have experience in creating wireframes, mockups, and layouts.
-
-3. SEO: A Web developer should have knowledge of SEO best practices and strategies to improve website visibility. They should also be able to implement on-page optimization strategies.
-
-4. Communication: A Web developer should be able to communicate effectively with their team members and clients. They should also be able to work with a team to develop"
-What are cybersecurity analyst qualifications that recruiters look for?,,,"- Bachelor's degree in computer science, information security, or a related field
-        - Certified Information Security Manager (CISM) certification
-        - Knowledge of security protocols and procedures
-        - Experience in risk assessment and mitigation strategies
-        - Knowledge of relevant laws and regulations
-        - Ability to communicate effectively with technical and non-technical teams
-        - Strong problem-solving and analytical skills
-
-As a cybersecurity analyst, some of the qualifications that recruiters look for include:
-
-1. Bachelor's degree in computer science, information security, or a related field: A strong foundation in computer science and information security is essential for a cybersecurity analyst.
-
-2. Certified Information Security Manager (CISM) certification: This certification is a valuable asset for a cybersecurity analyst as it demonstrates their knowledge and expertise in information security management.
-
-3. Knowledge of security protocols and procedures: A strong understanding of security protocols and procedures is crucial for a cybersecurity analyst to be able to identify and mitigate potential security risks"
+","Recruiting managers look for candidates who have strong technical skills and experience in web development. This includes knowledge of HTML, CSS, JavaScript, and other front-end technologies, as well as experience in back-end technologies like C#,.NET, and PHP. Additionally, recruiters look for candidates who have a strong portfolio of web development projects and experience in working with CMS platforms and e-commerce systems. It is also important for web developers to have a solid understanding of SEO best practices and be able to implement on-page optimization strategies."
+What are cybersecurity analyst qualifications that recruiters look for?,,"posture.Provide guidance and support to internal stakeholders on cybersecurity best practices and incident response procedures.Participate in security awareness training and education programs for employees to promote a culture of security awareness and compliance. Qualifications:  Bachelor's degree in Computer Science, Information Security, or a related field.Experience in a cybersecurity role, preferably as a Security Analyst or Incident Responder.Strong knowledge of cybersecurity principles, practices, and technologies, including SIEM, IDS/IPS, firewalls, antivirus, and endpoint protection.Hands-on experience with security tools such as Splunk, Wireshark, Nessus, and Metasploit.Experience with threat hunting, malware analysis, and forensic investigation techniques.Understanding of common cybersecurity frameworks and standards (e.g., NIST, ISO 27001, CIS Controls).Excellent analytical and problem-solving skills with a keen attention to detail.Strong communication and interpersonal
+trends and technologies to continuously enhance our defence mechanisms. Requirements:  Proven experience in cyber threat detection, incident response, and vulnerability management.Proficiency in security tools such as SIEM, IDS/IPS, antivirus software, and penetration testing frameworks.Strong understanding of networking protocols, encryption techniques, and risk assessment methodologies.Excellent communication skills with the ability to convey complex technical concepts to non-technical stakeholders. What We Offer:  Opportunities for professional development and career growth.25 days holidayPensionHealthcare and dental coverHoliday schemeProfessional development If you're ready to take on the challenge of defending against cyber adversaries and making a difference in the world of cybersecurity, apply now to join our team as a Cyber Security Analyst! Together, let's secure a safer digital future. Apply today! In Technology Group Ltd is acting as an Employment Agency in relation to
+the cybersecurity field.Cybersecurity Teammates: Together, you'll navigate the digital landscape, sharing knowledge and experiences to keep our systems secure.CTO: The ultimate support system, offering guidance and encouragement as you learn and grow in your role. Desired Qualifications / Certifications:  Bachelor's degree in Computer Science, Information Technology, or related field Entry-level certifications such as CompTIA Security or similar.We will consider previous industry experience in place of a degree  Experience  Skills:  A passion for cybersecurity and a willingness to learn and grow in a fast-paced environment.Strong communication skills and the ability to work effectively in a team.Basic understanding of cybersecurity principles and technologies.Familiarity with operating systems such as Linux and Windows is a plus.Eagerness to obtain relevant certifications and advance in the field of cybersecurity. To apply, click APPLY or submit your up-to-date CV to me at Axata[dot]
+","
+1. Bachelor's degree in computer science, information security, or a related field.
+2. Experience in a cybersecurity role, preferably as a Security Analyst or Incident Responder.
+3. Hands-on experience with security tools such as Splunk, Wireshark, Nessus, and Metasploit.
+4. Experience with threat hunting, malware analysis, and forensic investigation techniques.
+5. Understanding of common cybersecurity frameworks and standards (e.g., NIST, ISO 27001, CIS Controls).
+6. Strong analytical and problem-solving skills with a keen attention to detail.
+7. Proven experience in cyber threat detection, incident response, and vulnerability management.
+8. Proficiency in security tools such as SIEM, IDS/IPS, antivirus software, and penetration testing frameworks.
+9. Strong understanding of networking protocols, encryption techniques, and risk assessment methodologies.
+10. Excellent communication skills with the ability to convey complex technical concepts"
 What are some software tools that an IT consultant need to know?,,"and cloud solutions, plus cyber security and safeguarding. Communication is a key part of this role, ensuring ideas, recommendations and plans are clear and documented. An ability to explain technical things to non-technical stakeholders is important. IT Consultant - Overview:  Lead client IT audits, creating digital transformation plans for implementation.Set technical standards, working within the group.IT infrastructure planning, including network designs, cloud services, and cyber security. From planning and design through to project completion.Provide IT consultancy and third/fourth level technical support services to clients, on-site and remotely.Assist with internal IT systems and IT projects, including RD.Provide technical guidance and be a point of technical escalation when required to ensure high service levels are delivered and maintained. Company  department responsibilities:  You will be a key member of the senior team, with a flexible and adaptable approach to the job
-Job Description: Papyrus Software Group is looking for experienced, ambitious International IT Consultants to join their team. Working with blue-chip companies worldwide, this position is suited to an already successful consultant who wants to be part of a company that is  leading the way with its innovative technology within the Enterprise Content Management, AI and Adaptive Case Management collaborative arena. Competitive salary offered depending on skills and expertise.As an International IT Consultant within our professional services team based in Kingsclere, Newbury, your main focus will be to demonstrate, configure, implement, and support an industry-leading software solution. With a proven ability to excel in a customer-facing  role, you’ll have a natural ability to pick up new and innovative technologies and be able to liaise with clients through all phases of a project from proof of concept to go live. Full training at our international locations on the company’s product
 Job Title: IT Consultant
-","As an IT consultant, it is important to have knowledge of software tools that are commonly used in the industry. Some of the most important tools include:
-
-1. Microsoft Office Suite: This includes Word, Excel, PowerPoint, and Outlook.
-
-2. Adobe Creative Suite: This includes Photoshop, Illustrator, and Premiere.
-
-3. GSuite: This is a cloud-based suite of tools that includes Google Docs, Sheets, and Slides.
-
-4. Slack: This is a messaging and collaboration platform that is commonly used in the industry.
-
-5. Zoom: This is a video conferencing platform that is commonly used for remote meetings.
-
-6. Trello: This is a project management tool that is commonly used to track progress and keep teams on track.
-
-7. Git: This is a version control system that is commonly used to track changes to code and collaborate with other developers.
-
-8. Jira: This is a project management tool that"
+Job Title: IT Consultant
+","
+1. Microsoft Office Suite (Word, Excel, Outlook, PowerPoint, etc.)
+2. Adobe Creative Suite (Photoshop, Illustrator, Premiere, etc.)
+3. Git
+4. GSuite (Google Docs, Sheets, Slides, Drive, etc.)
+5. Zoom
+6. Slack
+7. Trello
+8. Asana
+9. Jira
+10. GitLab
+11. Bitbucket
+12. Visual Studio
+13. NPM
+14. React
+15. Angular
+16. Node.js
+17. Docker
+18. AWS
+19. Azure
+20. GitLab CI/CD
+21. Jenkins
+22. Postman
+23. Wireshark
+24. Fiddler
+25. Nginx
+26. Logstash
+27. Splunk
+28. Ansible
+29. Ansible Tower
+30. Ansible Playbook
+31. Ansible Collection
+32. Ans"
 What are skill descriptions most recruiters look for in a software engineer?,,"You’ll live and breathe our Customer First ethos, with an innovative and agile approach to problem-solving. You’ll enjoy working collaboratively with the wider Engineering team and you’ll thrive on delivering excellent data delivery.Skills and competencies Must have previous experience in Software Engineering, with a strong portfolio of completed projects.Strong attention to detail, proficient in analytical thinking and problem-solving.Able to communicate with all levels of stakeholders.Solid understanding of software development methodologies, algorithms, data structures, and design patterns.Experience with web or mobile application development and related frameworks.Proficient in one or more programming languages - Java, C, UniVerse, Python, or JavaScript.It is highly likely you will have worked in any of the following roles and/or markets, and worked with the following products and/or services: Agile, Builders Merchants, Coding, Construction, Data Analysis, Database Analyst, Google
 Job Title: Software Engineer
 Job Title: Software Engineer
 ","
-1. Strong programming skills, including knowledge of Java, C, Python, or JavaScript.
-2. Ability to develop and maintain complex software systems.
-3. Knowledge of software development methodologies, including Agile.
-4. Good problem-solving and analytical skills.
-5. Experience with web or mobile application development and related frameworks.
-6. Proficiency in one or more programming languages - Java, C, UniVerse, Python, or JavaScript.
-7. Experience with databases and data analysis.
-8. Knowledge of security protocols and coding standards.
-9. Ability to work collaboratively with the wider Engineering team.
-10. Excellent communication and problem-solving skills."
+1. Strong programming skills
+2. Ability to write clean and maintainable code
+3. Knowledge of software development methodologies and practices
+4. Experience with databases and database design
+5. Knowledge of software testing practices
+6. Knowledge of web development frameworks
+7. Knowledge of software architecture principles
+8. Knowledge of software engineering best practices
+9. Experience with software development lifecycle
+10. Experience with software development tools and processes
+11. Knowledge of software development processes
+12. Knowledge of software development methodologies
+13. Knowledge of software development tools and technologies
+14. Knowledge of software development principles
+15. Knowledge of software development lifecycle
+16. Knowledge of software development tools
+17. Knowledge of software development processes
+18. Knowledge of software development methodologies
+19. Knowledge of software development best practices
+20. Knowledge of software development principles
+21. Knowledge of software development tools
+22. Knowledge of software development processes
+23. Knowledge of software development best practices
+24. Knowledge of"
 What are the programming languages demanded in web developer jobs?,,"Job Title: Web Developer - C++
 Job Title: Web Developer
 Job Title: Web Developer
-","The programming languages commonly demanded in web developer jobs are HTML, CSS, JavaScript, PHP, and C++."
-Can you give common job requirements in Computer Vision?,,,"- Bachelor's degree in computer science, computer engineering, or a related field.
-        - Strong programming skills in languages such as C++, Python, or Java.
-        - Experience in image processing, computer graphics, and/or machine learning.
-        - Understanding of computer vision algorithms and techniques.
-        - Knowledge of computer vision frameworks and libraries.
-        - Experience in developing and deploying computer vision applications.
-        - Ability to work in a team environment and communicate effectively.
-        - Understanding of computer vision concepts such as object recognition, tracking, and feature extraction.
-        - Experience in applying computer vision to real-world problems."
+","
+The programming languages commonly demanded in web developer jobs are HTML, CSS, JavaScript, and PHP. HTML and CSS are used to create the structure and design of a website, while JavaScript is used to add interactivity and dynamic features. PHP is used to handle server-side scripting and database management."
+Can you give common job requirements in Computer Vision?,,"Job Title: Computer Vision Engineer
+Job Description: We are currently looking for a Computer Vison Engineer to join our client in West London. You will be joining an industry leading consumer technology brand, working on cutting-edge on-device AI. As a Computer Vision Engineer you will:  Work on cutting-edge solutions in Computer Vision / Machine LearningTake on technical responsibilities for key elements of projects.Translate technical requirements into functioning design. Skills and Qualifications Required Skills  Masters or PhD in a related field.Programming experience in C / Python.Experience developing ML FrameworksExpertise in image-based 3D reconstruction: Photogrammetry, Neural Radiance Fields (NERF) or Gaussian Splatting techniques.Excellent communication, teamwork and a results-oriented attitude 6 Month contract with potential extension
+Location: West London
+Part-time: False
+Full-time: True
+Job Title: Computer Vision Engineer
+Job Title: Computer Vision Engineer
+","1. Bachelor's or Master's degree in Computer Science, Computer Engineering, or a related field.
+2. Experience with programming languages such as C++, Python, and Java.
+3. Experience with computer vision and machine learning algorithms and frameworks.
+4. Knowledge of 3D modeling and rendering.
+5. Understanding of object recognition and tracking.
+6. Knowledge of image and video processing.
+7. Experience with computer vision libraries such as OpenCV.
+8. Experience with developing computer vision applications on mobile devices.
+9. Experience with developing computer vision applications on embedded systems.
+10. Knowledge of computer vision algorithms and techniques such as image segmentation, feature extraction, and object recognition.
+11. Knowledge of computer vision hardware such as GPUs and CPUs.
+12. Knowledge of computer vision software such as TensorFlow, PyTorch, and Caffe.
+13. Understanding of computer vision and machine learning concepts.
+14. Experience with developing computer vision"
 List different responsibilities of an IT consultant.,,"Job Title: IT Consultant
 Job Title: IT Consultant
 Job Title: IT Consultant
-","1. Analyze and assess IT needs and requirements.
-2. Design and develop IT systems and applications.
-3. Implement and maintain IT systems and infrastructure.
-4. Troubleshoot and resolve IT-related problems.
-5. Develop and manage IT security policies and procedures.
-6. Manage and supervise IT personnel.
-7. Research and evaluate new IT technologies and trends.
-8. Monitor and analyze IT performance and recommend improvements.
-9. Develop and manage databases and data centers.
-10. Manage IT budgets and ensure cost-effectiveness."
+","1. Analyze and design computer systems and networks
+2. Develop and maintain software applications
+3. Troubleshoot technical problems and provide solutions
+4. Monitor system performance and upgrade hardware and software
+5. Train users in computer applications and procedures
+6. Manage databases and data centers
+7. Ensure data security and privacy
+8. Develop and maintain computer-based training programs
+9. Research and evaluate new technologies and trends
+10. Provide technical support and customer service"
 What qualifications does a full-stack engineer need?,,"Job Description: Full Stack Engineer - London - Exciting FinTech Start-UpPermanent  Innovative and Collaborative TeamWe’re looking for a Full Stack Engineer with strong React (Typescript) and Python experience to join an exciting FinTech Start-Up! They have strong financial backing and are expanding their engineering team. As a Full Stack Engineer, you’d be a core part of  the team and helping to develop the frontend and backend of their web application. This is a great opportunity for a Full Stack Engineer looking for a chance to make an impact on the business and play a key role in the team’s growth.What you would ideally have: Degree from top Russell Group universities (Computer Science or a related field)3 years of professional experienceStrong technical experience with React, TypeScript, Python, AWS, APIsGreat communication skillsPassion for driving development and loves challenges!Bonus if you have knowledge of financial markets What’s in it for you: Competitive salary
 Job Description: Full Stack Engineer with key skills in node.js, REST/SOAP API development  integration and React is sought on a hybrid basis by a market leading FinTech based in Birmingham. With large scale investment in technical innovation this Full Stack Engineer will play a key role in shaping large scale application design and development that will transform customer engagement and flexible service delivering over the coming years. This role would suit a Full Stack Engineer with at least 4 years experience looking to gain more experience in enterprise level application and software development and who relishes working within a tech for good environment. In return this Full Stack Engineer will be rewarded with market leading personal development and growth opportunities and incredibly flexibility around working hours and at home working. This Full Stack Engineer based near Birmingham should have most of the following key skills: - Proven track record of developing applications
 Job Title: Full Stack Engineer
-","A full-stack engineer should have a degree in computer science or a related field, as well as experience in web development, software development, and database management. Additionally, they should have experience in developing applications for multiple platforms, such as iOS and Android, and have knowledge of programming languages such as JavaScript, HTML, and CSS."
+","A full-stack engineer should have a strong technical background in programming, web development, and database design. They should also have experience in developing and deploying applications on different platforms, as well as experience in developing and maintaining web services. Additionally, a full-stack engineer should have experience in developing and deploying applications on different platforms, as well as experience in developing and maintaining web services."
 What responsibilities would I have as an AI solutions architect?,,"Job Description: AI Architect - Big 4, Insurance One of the world's most renowned consultancies is searching for an AI Architect to play a defining role in shaping and transforming Artificial Intelligence and Machine Learning strategies for some of the leading insurance companies in the world.  The successful applicant will be responsible for leading AI and Machine Learning engagements which will include engaging with C-level to gather requirements, and design the latest solutions across Generative AI, LLM, NLP, and ML and lead the delivery, you'll  also get involved in pre-sales and create POC's.  This is an excellent opportunity for a talented AI Architect to work for one of the world's best consultancies and deliver the latest AI solutions for leading insurers.  The role is remote with 50% travel to client site, paying between 95,000 to 115,000  Benefits including bonus, car etc.  Requirements  Over five years designing and building solutions across data science, machine learning,
 Job Description: As the Solutions Architect, you’ll be working in the Digital Education Products Portfolio team across a number of projects. We are seeking a highly skilled and motivated Systems Architect to join a team and spearhead the design, implementation and integration  of robust, scalable, and secure technology solutions across a digital education, customer facing global education business. As a Solutions Architect, you will play a pivotal role in designing, optimizing, and evaluating the technologies that form the digital  education platforms and products. The Solutions Architect will possess a strong delivery ethic and ensure technology projects are designed and implemented having thoroughly evaluated options and opportunities for both short and long term, to high quality standards and taking into consideration  our technology landscape. Key responsibilities - Solutions Architect: Develop and maintain a comprehensive technical architecture for the digital education
 Job Description: Senior Technical Solution Architect (SaaS, Cloud, API) Our client is a leading provider of SaaS solutions who are currently seeking a permanent Senior Technical Solution Architect to own technical vision of their solution. Responsibilities include:  Working with the senior product and technical managersBe responsible for the technical integration strategy of the product suite.Help develop a big data solution across products.Define both the internal and external technical API strategy.Work with newly formed AI team to determine how value can be added to existing product set through the application of contemporary technologies.Designing and implementing strategic, end-to-end architectural solutions that align with the business objectives of customersCollaborating with cross-functional teams, you will provide technical leadership and expertise throughout the product lifecycle Skills/experience required:  Vast experience in technical solution architecture, SaaS
-","As an AI solutions architect, you would be responsible for designing and implementing AI solutions to improve business processes and outcomes. This would include gathering requirements, designing AI models, and integrating AI into existing systems. You would also be responsible for managing AI infrastructure, ensuring data security, and developing AI-based applications. Additionally, you would be responsible for creating AI-based solutions that align with the business objectives of customers."
-What are recent topics a Cybersecurity consultant should learn about?,,,"- Encryption techniques
-        - Network security
-        - Web application security
-        - Operating system security
-        - Firewall security
-        - Intrusion detection systems
-        - Security code reviews
-        - Penetration testing
-        - Security compliance regulations
-        - Cybersecurity incident response
-        - Cloud security
-        - Mobile device security
-        - Data loss prevention
-        - Security architecture design"
+","As an AI solutions architect, you would be responsible for designing and implementing AI solutions for clients. Your responsibilities may include:
+
+1. Developing and maintaining a comprehensive technical architecture for the AI solutions
+2. Designing and implementing strategic, end-to-end architectural solutions that align with the business objectives of customers
+3. Providing technical leadership and expertise throughout the product lifecycle
+4. Working with cross-functional teams to develop and maintain AI solutions
+5. Collaborating with clients to define their AI needs and requirements
+6. Creating and managing AI models, algorithms, and data pipelines
+7. Analyzing data and creating insights to improve AI solutions
+8. Troubleshooting and resolving technical issues with AI solutions
+9. Creating and maintaining documentation for AI solutions
+10. Developing and maintaining a knowledge base of AI solutions and best practices
+11. Developing and maintaining relationships with clients to ensure a high level of customer satisfaction"
+What are recent topics a Cybersecurity consultant should learn about?,,"Job Title: Cybersecurity Consultant
+Job Description: Are you experienced in Cybersecurity and seeking a new opportunity? Well, apply for this Cybersecurity Consultant position now! We are looking for a Cybersecurity Consultant to join our client's team permanently. The Cybersecurity Consultant will be working within the Security team and will be providing Cyber Security advice and guidance. The Cybersecurity Consultant must be able  to drive have a calm and professional demeanor and be able to lead on projects across a multitude of industries. Key Responsibilities for the Cybersecurity Consultant:  Conduct cybersecurity  compliance assessments against recognized best practices and industry standards, as appropriate to the organization.Act as a point of escalation for security-related incidents across the businessLead on the delivery of hands-on cybersecurity solutions within the business.Respond to and report on security-related alerts generated from various monitoring solutions.Conduct gap analysis on client systems,
+solutions.Conduct gap analysis on client systems, to identify current security posture versus current security best practicesWork within the security team to provide Cybersecurity advice and guidance, heavily focused on Microsoft 365 Cloud Security Solutions, Governance, and Compliance.Act as a mentor to junior members of the teams to monitor and respond to client cybersecurity incidents, and lead on the resolutionWork collaboratively with the Technical and Project teams. Skills Required for the Cybersecurity Consultant:  Knowledge of IAM, MFA, MDM and DLP technologiesDemonstrable experience leading on Information Risk, Compliance and Governance.Advanced knowledge of managing MS365 Cloud security solutions (Endpoint, Defender, Azure)Cyber Essentials Assessor status or prerequisites to achieve this.Demonstrable knowledge of applying security standards and frameworks across a range of industries, including but not limited to; Cyber Essentials, GDPR, ISO27001, NIST, CIS. If this role is
+","
+1. Cloud Security: Cloud security is an important area for a Cybersecurity Consultant to learn about, as many companies are moving their workloads to the cloud. It is important to understand the security implications of this shift and how to ensure the security of data and applications in the cloud.
+
+2. Network Security: Network security is an important area for a Cybersecurity Consultant to learn about, as many companies are moving their workloads to the cloud. It is important to understand the security implications of this shift and how to ensure the security of data and applications in the cloud.
+
+3. Compliance: Compliance is an important area for a Cybersecurity Consultant to learn about, as companies are required to comply with various regulations. It is important to understand the compliance requirements and how to ensure compliance with these regulations.
+
+4. Endpoint Security: Endpoint security is an important area for a Cybersecurity Consultant to learn about, as endpoints are often the entry point for malicious actors. It is important to understand how to"
 Give me some fairly recent topics in the realm of data science.,,"Job Description: Data Scientist - Asset Management - London (Tech stack: Data Scientist, Python, R, Data Science, Machine Learning, Artificial Intelligence, Tableau, Data Scientist, Engineer, Senior, Leader, Technical Lead) Founded in 1930, our client is a leading investment manager with offices in Europe, Asia and North America. They manage over 120 billion across all asset classes and employ over 2000 people around the world and are developing revolutionary applications  that have attracted much attention in the trade press. As a result of this there are several Greenfield software development projects that require talented Data Scientist to build software that will support their progression. We are looking for Data Scientist that can hit the ground running and be instrumental  in the creation of stylish and innovative products. Every possible resource will be at your disposal to help you achieve this. We are looking for Data Scientist with a good grasp of some or all of the
 projects, including data extraction, cleansing, exploration, modeling, and deployment of models into production. · Design and develop machine learning algorithms to identify patterns and trends in patient data and provide recommendations for personalized treatment plans. · Work closely with IT teams to ensure seamless integration of data science models with existing systems and databases. · Stay up to date with the latest advancements in data science and contribute to the continuous improvement of our data science practice. · Mentor and provide guidance to junior data scientists and analysts to foster their professional growth. Requirements · Strong expertise in statistical analysis, machine learning algorithms, and predictive modeling. · Proficient in programming languages such as Python or R, and experience with SQL and other database technologies. · Solid understanding of data visualization techniques and tools, and ability to communicate complex findings to non-technical
-of the Defence and Security sector for AI  Data transformation opportunities Key Skills and Requirements  Essential:  Active Enhanced DV ClearanceApplying data science or machine learning in Defence/Security, public sector, or academiaProficiency in various machine learning architectures and modelsMethodical problem-solving skillsEffective communication of complex technical concepts to diverse audiencesClient relationship management abilities Desirable:  Cloud-based Data Science and Machine Learning services (AWS, Azure, GCP)Familiarity with Python libraries for data management, statistics, machine learning, and visualisation.Expertise in popular machine learning frameworks like TensorFlow and PyTorchKnowledge of cutting-edge techniques for Natural Language Processing and Computer VisionStrong grasp of basic probability concepts and machine learning lifecycleExperience with workflow and pipelining frameworks (e.g., Kubeflow, MLFlow, Argo)Understanding and application of Ethical AI
-","1. Artificial Intelligence (AI)
-2. Machine Learning (ML)
-3. Data Mining (DM)
-4. Natural Language Processing (NLP)
-5. Cloud Computing
-6. Big Data
-7. Data Visualization
-8. Data Analysis
+Job Description: Role - Lead Data Scientist Skills - Python / Machine Learning / AI  Location - Leicester  Salary - Up to 70,000 plus excellent benefits package Work Pattern - Hybrid with 1 day in the office per week Summary Oscar have partnered exclusively with a very well-established business in the East Midlands who are looking for someone to kick start their Data Science practice. This is an incredible role; they have some business problems they are looking to AI to solve,  and the potential impact of this role is huge. They have a huge amount of data, but their analytics offering is in its infancy at best so now is the time to add expertise to the team to lead this. The Company This is a well-known, very well-established business and a true leader in their field. They already generate a lot of revenue and are highly profitable, but AI / Data Science can add a huge amount of value here and potential is really untapped. They have significant data systems in place; however, they are
+","1. Natural Language Processing (NLP)
+2. Machine Learning
+3. Data Visualization
+4. Big Data
+5. Artificial Intelligence
+6. Data Analysis
+7. Data Mining
+8. Data Engineering
 9. Data Science
 10. Deep Learning
-11. Reinforcement Learning
-12. Neural Networks
-13. Image Processing
-14. Computer Vision
-15. Robotics
-16. Automation
-17. Big Data Analytics
-18. Data Engineering
-19. Data Architecture
-20. Data Governance
-21. Data Warehousing
-22. Data Integration
-23. Data Quality Assurance
-24. Data Security
-25. Data Governance
-26. Data Analysis
-27. Data Mining
-28. Data Visualization
-29. Machine Learning
-30. Deep Learning
-31. Data Science
-32. Data Engineering
-33. Big Data
-34. Cloud Computing
-35. Data Management
-36. Data"
+11. Data Engineering
+12. Data Analysis Tools
+13. Data Science Tools
+14. Big Data Analytics
+15. Data Science Education
+16. Data Science Certification
+17. Data Science Career
+18. Data Science Salary
+19. Data Science Interview Questions
+20. Data Science Bootcamp"
 Can you explain the new emerging skills for a Software Architect?,,"is available for this role. The Embedded Software Architect will need to visit Germany up to 4 times p.a.The role:The successful Embedded Software Architect will be responsible for the full Embedded Software Systems Architecture Design, supporting Junior Engineers and take the initiative, collaborate and communicate well.Key Skills: 5-7 years minimum industry experienceEmbedded Software Development experienceEmbedded Software Programming in C, CKnowledge of model based development tools – MATLAB, Simulink, StateflowAn understanding of control methodologiesBare MetalDSP Microcontrollers or real time controlKnowledge of real time operating systems (RTOS)Network protocols – SPI, I2C, USB, UART, TCP/IPExperience of System integration testing, debuggers, bus analysers, and using lab equipment (scopes, sources, loads)Requirements engineering, SW architecture design, SW test planning, and documentationAbility or ambition to lead a small team, leading sprints and using collaborative tools
 Job Title: Software Architect
 Job Title: Software Architect
 ","
-As a software architect, you need to stay up-to-date with emerging skills and technologies. Some of the new emerging skills for a software architect include:
+The new emerging skills for a Software Architect include:
 
-1. Cloud-native development
-2. Agile methodologies
-3. Artificial intelligence and machine learning
-4. Cybersecurity
-5. DevOps
-6. Agile development
-7. Data analytics
-8. 5G and Internet of Things (IoT)
-9. Blockchain development
-10. Cloud-based software development
-11. Mobile application development
-12. Web application development
-13. Software testing and quality assurance
-14. Agile project management
-15. Agile development methodologies
-16. DevOps
-17. Agile development
-18. Big data
-19. Natural language processing
-20. Machine learning
-21. Automation
-22. Data visualization
-23. Cloud-based software development
-24. Mobile application development
-25. Web application development
-26. Software development
-27. Software architecture
-28. Software design"
-What programming skills would IT managers require to possess?,,,"
-IT managers should possess a range of programming skills, including knowledge of programming languages, database systems, and software development methodologies. They should also have a solid understanding of computer networks, security protocols, and project management. In addition, IT managers should be able to analyze and interpret complex data sets and communicate effectively with technical and non-technical staff."
+1. Cloud-native architecture and design
+2. Microservices architecture and design
+3. Agile development
+4. Security architecture and design
+5. DevOps architecture and design
+6. Machine learning architecture and design
+7. Big data architecture and design
+8. Blockchain architecture and design
+9. Cloud-based architecture and design
+10. Artificial intelligence architecture and design
+
+A Software Architect should be knowledgeable in these areas to stay competitive in the industry."
+What programming skills would IT managers require to possess?,,"The IT Project Manager  will need to be a great team motivator and happy to get their hands dirty to get the job done.Essential skills:• Background in project management• Successful track record of delivery projects on-time and in-budget• Excellent communication skills, both verbally and written• Strong time-keeping and organisation skillsThis is a fantastic opportunity for the successful IT Project Manager to join a hugely successful professional services firm that have created a great place to work and truly value their employees.If you are interested, please click the apply now button.Add me on LinkedIn to stay up to date with new opportunities! Search Ollie Cottrill and you will easily find me.Coaction Recruitment Ltd acts as an employment agency for permanent recruitment and an employment business for the supply of temporary workers.
+Job Description: IT ManagerWorthingSalary up to 55,000 Looking for an exciting career opportunity in IT? This excellent company is looking for an IT Manager with fantastic SQL writing skills to join them. You will have the chance to showcase your skills and make a significant impact in this leading organization,  with great potential for professional growth. ABOUT THE ROLE: You will oversee and direct the company's IT infrastructure, including computers, networks, servers, and security systems. You'll also play a crucial part in generating and upholding SQL-based reports to offer valuable organizational insights and producing  precise and visually engaging reports. DUTIES  RESPONSIBILITIES INCLUDE:  Ensure smooth connectivity and performance of computer networks.Manage server configurations, maintenance, and troubleshooting.Provide proactive IT support for hardware, software, and network issues.Optimize databases using Crystal reports and SQL for data integrity and access.Implement
+Friday finish at 2:30pm. Whether it's family time, hobbies, or personal errands, enjoy the balance you deserve. What you will do as the IT Manager:  Steer the IT systems, supporting approximately 115 users.Spot and implement improvement opportunities.Coordinate tasks with the IT Technician and manage third-party relations.Maintain and upgrade networks, servers, and cyber security measures.Nurture our IT Helpdesk towards permanent solutions.Manage data with meticulous documentation and backup procedures.Be involved in the procurement of cutting-edge IT equipment. What you need to apply for the IT Manager position:  Senior-level IT experience, preferably in manufacturing.A versatile IT skill set, ready for strategic planning and daily operations alike.A robust understanding of cybersecurity, and safeguarding digital assets. About the Company: A fourth-generation family business who are a stalwart in South Wales with a 55-year track record. They are part of an international group
+","IT managers require programming skills to oversee the development, maintenance, and operation of computer systems and networks. They also need to be able to troubleshoot and diagnose technical issues. They should be proficient in programming languages such as Java, C++, C#, and Python. They should also be familiar with database management, web development, and software development."
