@@ -60,14 +60,13 @@ def create_jobs_csv(job_listings, reed_key):
 def get_job(query):
     """Helper function that returns the CS subject of the sentence to feed into job search."""
     helper_template = """
+    [INST]Output only the Computer Science job title of the sentence, give one or two words.
+    For example, the output of "What programming skills would IT managers require to possess?" is "IT manager".
+    The output of "What are some software tools that an data scientist need to know?" is "data scientist". [\INST]
     Sentence: {query}
-    Output only the Computer Science job title of the sentence, give one or two words.
-    For example, the output of "What can a cybersecurity consultant contribute to a company?" is "cybersecurity consultant".
-    For example, the output of "What are skills required for a data science job?" is "data science".
     The output is:
     """
     prompt = PromptTemplate(template=helper_template, input_variables=["query"])
-    # model_name = "tiiuae/falcon-7b-instruct"
     model_name = "mistralai/Mistral-7B-Instruct-v0.1"
     llm = HuggingFaceEndpoint(
         repo_id=model_name,
