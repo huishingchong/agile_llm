@@ -8,7 +8,6 @@ import csv
 import re
 import pandas as pd
 
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from langchain_community.llms import HuggingFaceEndpoint
 from langchain.chains import LLMChain, RetrievalQA
 from langchain.prompts import PromptTemplate
