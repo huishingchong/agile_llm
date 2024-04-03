@@ -8,17 +8,17 @@ The final product is extracting job information from a real-time Job API (Reed) 
 
 ## Organisation
 
-### 2/3 Google Collab notebooks
+### 2 Google Collab notebooks
 
 The notebooks detailing my exploration and effectivness of incremenets of my pipeline is in:
 
-- prompting: comparing pre-trained and fine-tuned model with the same prompt
-- job_analysis: using fine-tuned model that was better performing in last step, and performing RAG on job API, evaluate the perforance
-  To run the Google collab notebooks, Pro subscription would be required for GPU use and additional memory
+- finetuned_model.ipynb: comparing pre-trained and fine-tuned model with the same prompt
+- job_analysis.ipynb: using fine-tuned model that was better performing in last step, and performing RAG on job API
+  To run the Google collab notebooks, Pro subscription would be required, because evaluation implemented require GPU use and additional memory. The specific runtime used was V100 GPU.
 
 ### Final implementation with Gradio interface
 
-Final implementation is in app.py which can be run locally on machine.
+The final implementation/pipeline is in app.py which can be run locally on machine.
 You must have an .env file in the same directory as app.py with your
 
 - HUGGINGFACEHUB_API_TOKEN = ...
