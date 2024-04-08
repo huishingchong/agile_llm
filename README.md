@@ -28,4 +28,6 @@ In the terminal, run
 `python3 app.py `
 and a Gradio demo will open in a browser with specified web address.
 
-Methods functionality are tested in test_app.py.
+### Testing
+
+Methods functionality are tested in test_app.py. To run the test file, similarly to the prerequisites for app.py, you would need to have the .env file with your HuggingFace API and Reed API tokens.

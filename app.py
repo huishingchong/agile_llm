@@ -1,4 +1,3 @@
-from getpass import getpass
 from dotenv import load_dotenv
 import os
 from pathlib import Path
