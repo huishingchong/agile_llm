@@ -18,7 +18,7 @@ The Python notebooks detailing the exploration of LLM techniques and effectivnes
 
 ### Final implementation with Gradio interface
 
-The final implementation/pipeline is in app.py which can be run locally on machine. In order to run it, you must first install libraries and dependencies from requirements.txt with the command: `pip install -r requirements`
+The final implementation/pipeline is in app.py which can be run locally on machine. In order to run it, you must first install libraries and dependencies from requirements.txt with the command: `pip install -r requirements.txt`
 
 You must have an .env file in the same directory as app.py with your
 
@@ -28,6 +28,8 @@ You must have an .env file in the same directory as app.py with your
 In the terminal, run
 `python3 app.py `
 and a Gradio demo will open in a browser with specified web address.
+
+Part of the pipeline is to automatically search for relevant jobs from the Reed Job API based on the user query, and the job listings returned is collected into the job_listings.csv file. Therefore the job_listings.csv file is to serve as the retrieval source for the LLM to perform Retrieval-Augmented Generation and is dynamically updated each time the user queries the chatbot.
 
 ### Testing
 
