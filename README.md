@@ -28,6 +28,7 @@ You must have an .env file in the same directory as app.py with your
 For guidance, the .env file should look like this:
 ![Alt text](env_file_image.png)
 Get your HuggingFace token here: https://huggingface.co/docs/api-inference/quicktour#get-your-api-token
+
 You can sign up for the Reed API token here: https://www.reed.co.uk/developers/jobseeker
 
 In the terminal, run
