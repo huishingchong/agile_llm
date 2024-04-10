@@ -24,13 +24,19 @@ You must have an .env file in the same directory as app.py with your
 
 - HUGGINGFACEHUB_API_TOKEN = ...
 - REED_API_KEY = ...
-  ![Alt text](<Screenshot 2024-04-10 at 10.35.21 PM.png>)
-  You can get your HuggingFace token here: https://huggingface.co/docs/api-inference/quicktour#get-your-api-token
-  You can sign up for the Reed API token here: https://www.reed.co.uk/developers/jobseeker
+
+For guidance, the .env file should be
+![Alt text](<Screenshot 2024-04-10 at 10.35.21 PM.png>)
+You can get your HuggingFace token here: https://huggingface.co/docs/api-inference/quicktour#get-your-api-token
+You can sign up for the Reed API token here: https://www.reed.co.uk/developers/jobseeker
 
 In the terminal, run
 `python3 app.py `
 and a Gradio demo will open in a browser with specified web address.
+
+The interface will look like this:
+![Alt text](<Screenshot 2024-04-10 at 10.46.56 PM.png>)
+
 ![Alt text](<Screenshot 2024-04-10 at 10.44.36 PM.png>)
 Please be aware of the hourly usage limits of the Reed Job API.
 
