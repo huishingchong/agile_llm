@@ -169,12 +169,12 @@ def main():
     # Launch chat interface
     gr.ChatInterface(
         fn=chat_interface,
-        chatbot=gr.Chatbot(height=300),
+        chatbot=gr.Chatbot(height=380),
         textbox=gr.Textbox(placeholder="Ask me a question", container=False, scale=7),
-        title="Chatbot",
-        description="Ask Chatbot any question",
+        title="Education and Career Chatbot",
+        description="Ask Chatbot for Computer Science related industry guidance.",
         theme="soft",
-        examples=["What does AI stand for?", "What is Software Engineering?", "What is Cybersecurity?"],
+        examples=["Can you explain the experiences or skills that recruiters look for in a Software Architect?", "What do recruiters look for in Web developers?"],
         cache_examples=False,
         retry_btn=None,
         undo_btn="Delete Previous",

@@ -32,12 +32,11 @@ You can sign up for the Reed API token here: https://www.reed.co.uk/developers/j
 
 In the terminal, run
 `python3 app.py `
-and a Gradio demo will open in a browser with specified web address.
+and specified local web URL will be given where you can open the Gradio demo on your browser.
 
 The interface will look like this:
-![Alt text](interface_image1.png)
+![Alt text](interface_image.png)
 
-![Alt text](interface_image2.png)
 Please be aware of the hourly usage limits of the Reed Job API.
 
 Part of the pipeline is to automatically search for relevant jobs from the Reed Job API based on the user query, and the job listings returned is collected into the job_listings.csv file. Therefore the job_listings.csv file is to serve as the retrieval source for the LLM to perform Retrieval-Augmented Generation and is dynamically updated each time the user queries the chatbot.
