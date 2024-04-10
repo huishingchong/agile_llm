@@ -4,7 +4,7 @@
 
 In collaboration with IBM, this project investigates the possibility of creating more agile, timely relevant content using a combination of prompt engineering, a fine-tuned model, and Retrieval-Augmented Generation (RAG) in the adapted pipeline.
 
-The final product is extracting job information from a real-time Job API (Reed) and perform relevant analysis to provide a response that is more timely and domain-specific to the specific Computer Science job in interest from the user query. This project hopes to guide online learning platforms or students by providing insights on, for example the skills or responsibilities, of the current workplace in the tech industry.
+The final product is extracting job information from a real-time Job API (Reed) and perform relevant analysis to provide a response that is more timely and domain-specific to the specific Computer Science job in interest from the user query. This project hopes to guide online learning platforms or students by providing insights on, for example, the skills or responsibilities, of the current workplace in the tech industry.
 
 ## Organisation
 

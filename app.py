@@ -151,7 +151,7 @@ def main():
 
                 chain_type_kwargs = {"prompt": QA_CHAIN_PROMPT}
                 qa = RetrievalQA.from_chain_type(llm=llm, 
-                    retriever=db.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": .5}),
+                    retriever=db.as_retriever(search_type="similarity_score_threshold", search_kwargs={"score_threshold": .5, "k": 3}),
                     return_source_documents=True,
                     chain_type_kwargs=chain_type_kwargs, verbose=True)
                 
