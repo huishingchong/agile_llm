@@ -24,10 +24,15 @@ You must have an .env file in the same directory as app.py with your
 
 - HUGGINGFACEHUB_API_TOKEN = ...
 - REED_API_KEY = ...
+  ![Alt text](<Screenshot 2024-04-10 at 10.35.21 PM.png>)
+  You can get your HuggingFace token here: https://huggingface.co/docs/api-inference/quicktour#get-your-api-token
+  You can sign up for the Reed API token here: https://www.reed.co.uk/developers/jobseeker
 
 In the terminal, run
 `python3 app.py `
 and a Gradio demo will open in a browser with specified web address.
+![Alt text](<Screenshot 2024-04-10 at 10.44.36 PM.png>)
+Please be aware of the hourly usage limits of the Reed Job API.
 
 Part of the pipeline is to automatically search for relevant jobs from the Reed Job API based on the user query, and the job listings returned is collected into the job_listings.csv file. Therefore the job_listings.csv file is to serve as the retrieval source for the LLM to perform Retrieval-Augmented Generation and is dynamically updated each time the user queries the chatbot.
 
