@@ -8,13 +8,18 @@ The final product is extracting job information from a real-time Job API (Reed) 
 
 ## Organisation
 
-### Two Python notebooks
+### Two Jupyter notebooks
 
-The Python notebooks details the exploration of LLM techniques and the effectiveness of improvements of the final pipeline. They are used to run experiments to explore the Research Questions in the dissertation. The two notebooks are:
+Jupyter notebooks are used to explore the LLM techniques and their effectiveness in the final pipeline. They are used to run experiments to explore the Research Questions in the dissertation. The two notebooks are:
 
-- finetuned_model.ipynb: comparing pre-trained and fine-tuned model with the same prompt (BERTScore and static manual evaluation)
-- job_analysis.ipynb: using fine-tuned model that was better performing in the last step, and performing RAG on job API and evaluation for this stage (UniEval Framework and static manual evaluation)
-  These notebooks are to be run on Google Colab and a Pro subscription would be required because the evaluation implemented requires GPU use and additional memory. Note that running the notebooks would use up compute units. The specific runtime used was V100 GPU for the experiments.
+- finetuned_model.ipynb: used to investigate RQ1. comparing pre-trained and fine-tuned model with the same prompt (BERTScore and static manual evaluation)
+- job_analysis.ipynb: used to investigate RQ2 and RQ3. Uses the fine-tuned model that was better performing in the last step, and performing RAG on job API and evaluation for this stage (UniEval Framework and static manual evaluation)
+
+#### Requirements
+
+These Jupyter notebooks are to be run on Google Colab and a Pro subscription would be required because the evaluation implemented requires GPU use and additional memory. Note that running the notebooks would use up compute units. The specific runtime used was V100 GPU for the experiments.
+
+As all results findings and model outputs are directly included in the dissertation's Evaluation and Appendix, you don't necessarily need to run the notebooks, but they are still made available for viewing and transparency.To open the Jupyter notebooks on Google Colab: Go to https://colab.google/ > Open Colab > Upload > Browse > and then select the specific notebook from the directory to open. An alternative shortcut is to click the 'Open in Colab' link on top of the specific notebook file (if it is available).
 
 ### Final implementation with Gradio interface
 
@@ -45,6 +50,10 @@ The interface will look like this:
 Please be aware of the hourly usage limits of the Reed Job API.
 
 Part of the pipeline is to automatically search for relevant jobs from the Reed Job API based on the user query, and the job listings returned is collected into the job_listings.csv file. Therefore the job_listings.csv file is to serve as the retrieval source for the LLM to perform Retrieval-Augmented Generation and is dynamically updated each time the user queries the chatbot.
+
+#### Troubleshooting
+
+If you encounter an ImportError related to a specific library, it may be due to installation issues or compatibility problems. In such cases, you can try reinstalling the library using the --force-reinstall flag with pip. E.g. `pip install --force-reinstall replace_library_name_here`
 
 ### Testing
 
