@@ -21,18 +21,18 @@ Jupyter notebooks are used to explore the LLM techniques and their effectiveness
 
 These Jupyter notebooks are to be run on Google Colab and a Pro subscription would be required because the evaluation implemented requires GPU use and additional memory. Note that running the notebooks would use up compute units. The specific runtime used was V100 GPU for the experiments.
 
-As all results findings and model outputs are directly included in the dissertation's Evaluation and Appendix, you don't necessarily need to run the notebooks. However, they are still available for viewing and transparency. To open the Jupyter notebooks on Google Colab: Go to https://colab.google/ > Open Colab > Upload > Browse > and then select the specific notebook from the directory to open. An alternative shortcut is to click the 'Open in Colab' link on top of the specific notebook file (if it is available).
+As all results findings and model outputs are directly included in the dissertation's Evaluation and Appendix, you do not necessarily need to run the notebooks. However, they are still available for viewing and transparency. To open the Jupyter notebooks on Google Colab: Go to https://colab.google/ > Open Colab > Upload > Browse > and then select the specific notebook from the directory to open. An alternative shortcut is to click the 'Open in Colab' link on top of the specific notebook file (if it is available).
 
 ### Final implementation with Gradio interface
 
 #### Set up a Python virtual environment (highly recommended)
 
-`python -m venv venv'
+`python -m venv venv`
 
 Activate the virtual environment
-`source venv/bin/activate' # for Linux/macOS
+`source venv/bin/activate` # for Linux/macOS
 OR
-`.\venv\Scripts\activate' # for Windows
+`.\venv\Scripts\activate` # for Windows
 
 #### Install project dependencies
 
