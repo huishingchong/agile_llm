@@ -6,6 +6,8 @@ In collaboration with IBM, this project investigates the possibility of creating
 
 The final product is extracting job information from a real-time Job API (Reed) and performing relevant analysis to provide a response that is more timely and domain-specific to the particular Computer Science job in the user query. This project hopes to guide online learning platforms or students by providing insights on, for example, the skills or responsibilities, of the current workplace in the tech industry.
 
+![Alt text](interface_image.png)
+
 ## Organisation
 
 ### Two Jupyter notebooks
@@ -13,7 +15,7 @@ The final product is extracting job information from a real-time Job API (Reed) 
 Jupyter notebooks are used to explore the LLM techniques and their effectiveness in the final pipeline. They are used to run experiments to explore the Research Questions in the dissertation. The two notebooks are:
 
 - finetuned_model.ipynb: used to investigate RQ1. comparing pre-trained and fine-tuned model with the same prompt (BERTScore and static manual evaluation)
-- job_analysis.ipynb: used to investigate RQ2 and RQ3. Uses the fine-tuned model that was better performing in the last step, and performing RAG on job API and evaluation for this stage (UniEval Framework and static manual evaluation)
+- pipeline_eval.ipynb: used to investigate RQ2 and RQ3. Uses the fine-tuned model that was better performing in the last step, and performing RAG on job API and evaluation for this stage (UniEval Framework and static manual evaluation)
 
 #### Requirements
 
@@ -43,9 +45,6 @@ You can sign up for the Reed API token here: https://www.reed.co.uk/developers/j
 In the terminal, run
 `python3 app.py `
 and specified local web URL will be given where you can open the Gradio demo on your browser.
-
-The interface will look like this:
-![Alt text](interface_image.png)
 
 Please be aware of the hourly usage limits of the Reed Job API.
 
