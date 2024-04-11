@@ -29,9 +29,10 @@ The 'cs' and 'industry' folders contain CSV files containing the output of the m
 
 ### Set up a Python virtual environment
 
-`python -m venv venv`
+Run: `python -m venv venv`
 
-Activate the virtual environment
+Activate the virtual environment:
+
 `source venv/bin/activate` for Linux/macOS
 
 OR
@@ -70,7 +71,9 @@ Part of the pipeline is to automatically search for relevant jobs from the Reed 
 
 ### Troubleshooting
 
-If you encounter an ImportError related to a specific library, it may be due to installation issues or compatibility problems. In such cases, you can try reinstalling the library using the --force-reinstall flag with pip. E.g. `pip install --force-reinstall replace_library_name_here`
+If you encounter an ImportError related to a specific library, it may be due to installation issues or compatibility problems. In such cases, you can try reinstalling the library using the --force-reinstall flag with pip.
+
+E.g. `pip install --force-reinstall replace_library_name_here`
 
 ### Testing
 
