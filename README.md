@@ -1,4 +1,4 @@
-# agile_llm
+# Agile content generation with RAG and LLMs - Providing industry knowledge and career guidance
 
 ## Project description
 
@@ -7,6 +7,8 @@ In collaboration with IBM, this project investigates the possibility of creating
 The final product is extracting job information from a real-time Job API (Reed) and performing relevant analysis to provide a response that is more timely and domain-specific to the particular Computer Science job in the user query. This project hopes to guide online learning platforms or students by providing insights on, for example, the skills or responsibilities, of the current workplace in the tech industry.
 
 ![Alt text](interface_image.png)
+
+When you open the project folder in your favorite IDE (e.g. Visual Studio Code), you can find two Jupyter Notebooks (used for experimentation of the project) and app.py (the main Python script for the chatbot application that implements the final pipeline). The following provides an overview of what these files are and instructions for accessing and executing them.
 
 ## Two Jupyter notebooks
 
@@ -48,7 +50,7 @@ Install libraries and dependencies from requirements.txt:
 
 ### Include API Tokens in the .env file
 
-You must have a .env file in the same directory as app.py with your
+Create a .env file in the same directory as app.py, and include your
 
 - HUGGINGFACEHUB_API_TOKEN = ...
 - REED_API_KEY = ...
