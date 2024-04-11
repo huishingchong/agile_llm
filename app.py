@@ -97,6 +97,13 @@ def main():
         temperature=0.5,
         max_new_tokens=200
     )
+    helper_llm = HuggingFaceEndpoint(
+        repo_id="mistralai/Mistral-7B-Instruct-v0.1",
+        model="mistralai/Mistral-7B-Instruct-v0.1",
+        task="text-generation",
+        temperature=0.5,
+        max_new_tokens=200
+    )
 
     # Define prompts
     template_qa = """Use the following context to answer the question at the end. 
@@ -108,8 +115,7 @@ def main():
     QA_CHAIN_PROMPT = PromptTemplate(template=template_qa, input_variables=["context", "question"])
 
     template_prompt = """
-    Please answer the question.
-    Answer professionally, and where appropriate, in a Computer Science educational context.
+    Please answer the question professionally.
     Question: {question}
     Response:
     """
@@ -160,7 +166,7 @@ def main():
                 text = result['result']
                 return text
             else: # If no jobs are found, normal prompting and response is done
-                llm_chain = LLMChain(prompt=prompt, llm=llm, verbose=True)
+                llm_chain = LLMChain(prompt=prompt, llm=helper_llm, verbose=True)
                 input_dict = {'question': textbox}
                 response_dict = llm_chain.invoke(input_dict)
                 response = response_dict['text']
@@ -174,7 +180,7 @@ def main():
         title="Education and Career Chatbot",
         description="Ask Chatbot for Computer Science related industry guidance.",
         theme="soft",
-        examples=["Can you explain the experiences or skills that recruiters look for in a Software Architect?", "What do recruiters look for in Web developers?"],
+        examples=["Can you explain the experiences or skills that recruiters look for in a Software Architect?", "What do recruiters look for in Web developers?", "What are topics to learn as a cybersecurity analyst?"],
         cache_examples=False,
         retry_btn=None,
         undo_btn="Delete Previous",
