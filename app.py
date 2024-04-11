@@ -115,7 +115,7 @@ def main():
     """
     prompt = PromptTemplate(template=template_prompt, input_variables=["question"])
 
-    # Initialize HuggingFaceEmbeddings
+    # Initialise HuggingFaceEmbeddings
     modelPath = "sentence-transformers/gtr-t5-base"
     model_kwargs = {'device':'cpu'}
     encode_kwargs = {'normalize_embeddings': True}
@@ -125,7 +125,7 @@ def main():
         encode_kwargs=encode_kwargs
     )
 
-    # Initialize text splitter
+    # Initialise text splitter
     text_split = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=50)
 
     # Get Reed API key
