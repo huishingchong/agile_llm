@@ -27,6 +27,8 @@ The 'cs' and 'industry' folders contain CSV files containing the output of the m
 
 ## Final implementation with Gradio interface
 
+The final pipeline and LLM application is in app.py which can be run locally on a machine.
+
 ### Set up a Python virtual environment
 
 Run: `python -m venv venv`
@@ -41,7 +43,8 @@ OR
 
 ### Install project dependencies
 
-The final pipeline and LLM application is in app.py which can be run locally on a machine. To run it, you must first install libraries and dependencies from requirements.txt with the command: `pip install -r requirements.txt`
+Install libraries and dependencies from requirements.txt:
+`pip install -r requirements.txt`
 
 ### Include API Tokens in the .env file
 
