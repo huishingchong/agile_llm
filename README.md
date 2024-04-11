@@ -57,7 +57,9 @@ You can sign up for the Reed API token here: https://www.reed.co.uk/developers/j
 
 ### Run application interface
 
-`python3 app.py `
+To run the application:
+`python3 app.py`
+
 Open the browser on the specified local web URL (http://localhost:7860) to run the Gradio demo.
 
 ### Other comments
